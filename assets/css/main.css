@@ -484,7 +484,7 @@ p {
   .navbar-toggler {
     position: absolute;
     right: 0;
-    top: 25px;
+    top: auto;
   }
 }
 
