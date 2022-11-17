@@ -529,8 +529,9 @@ var requestOptions = {
 
 fetch("https://maker.ifttt.com/trigger/get_started/json/with/key/bf9S9T9msDBJuJ0XdebPkXTRkfV_TiBuKugiCs2tmiE", requestOptions)
   .then(response => response.text())
-  .then(result => window.location.href="https://dashboard.stackform.io")
+  .then(result => console.log(result))
   .catch(error => console.log('error', error));
+  window.location.href="https://dashboard.stackform.io"
   }
     </script>
     <script src="./assets/js/bootstrap-5.0.0-beta2.min.js"></script>
