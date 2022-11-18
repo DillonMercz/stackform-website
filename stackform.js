@@ -1,22 +1,25 @@
-var form
-var questions
-var html=""
+var html = ""
 var color
 var textColor
 var buttonColor
-var formResponses={}
-function createForm(){
-for(var f in form){
-    if(form[f].options){
-        form[f].options.forEach((config) => {
-            document.getElementById("FormImg").src=config.image
-             document.getElementById("FormTitle").innerHTML=config.title
+var formResponses = {}
+var form
+var questions
+var owner
 
-            color = config.color
-            textColor = config.textColor
-            buttonColor = config.buttonColor
+function createForm() {
+    for (var f in form) {
+        if (form[f].options) {
+            form[f].options.forEach((config) => {
+                document.getElementById("FormImg").src = config.image
+                document.getElementById("FormTitle").innerHTML = config.title
+                owner = config.owner
 
-             })
+                color = config.color
+                textColor = config.textColor
+                buttonColor = config.buttonColor
+
+            })
         }
     }
 }
@@ -24,25 +27,25 @@ for(var f in form){
 createForm()
 
 
-function renderQuestions(){
-    html =""
-for(var i in questions){
+function renderQuestions() {
+    html = ""
+    for (var i in questions) {
 
 
 
 
-if(questions[i].type=="button"){
-html = html+ ``
-}
+        if (questions[i].type == "button") {
+            html = html + ``
+        }
 
 
 
-if(questions[i].type=="multiple"){
-    var start=""
-    var choices =""
-    if(questions[i].options){
-    questions[i].options.forEach((options) => {
-  choices = choices+`
+        if (questions[i].type == "multiple") {
+            var start = ""
+            var choices = ""
+            if (questions[i].options) {
+                questions[i].options.forEach((options) => {
+                    choices = choices + `
           <li>
             <input type="radio" class="custom-checkbox" name="${i}question-option-${options.text}" id="${i}question-option-${options.text}" value="${options.text}" onclick="formResponses[${i}]=this.value;console.log(formResponses[${i}]);document.getElementById('${options.next}').style.display='block';window.location.href='#${options.next}'">
             <label for="${i}question-option-${options.text}">
@@ -50,13 +53,13 @@ if(questions[i].type=="multiple"){
             </label>
         </li>
   `
-});
-}
-if(i == 1){
-start="start"
-}
+                });
+            }
+            if (i == 1) {
+                start = "start"
+            }
 
-html = html+ `<div class="step ${start}" id="${i}">
+            html = html + `<div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color} !important">
                                     <label style="color:${textColor} !important" class="h6 margin-none">${questions[i].text}</label>
@@ -70,25 +73,25 @@ html = html+ `<div class="step ${start}" id="${i}">
                                 </div>
                             </div>
                         </div>`
-}
-if(questions[i].type=="select"){
-    var start=""
-    var choices =""
-    if(questions[i].options){
-        console.log(questions[i].options)
-    questions[i].options.forEach((option) => {
-  console.log(option)
-  choices = choices+`
+        }
+        if (questions[i].type == "select") {
+            var start = ""
+            var choices = ""
+            if (questions[i].options) {
+                console.log(questions[i].options)
+                questions[i].options.forEach((option) => {
+                    console.log(option)
+                    choices = choices + `
 <option value="${option.text}">${option.text}</option>
   `
-});
-}
-console.log(questions[i].type)
-console.log(i)
-if(i == 1){
-start="start"
-}
-html = html+ `         <div class="step  ${start}" id="${i}">
+                });
+            }
+            console.log(questions[i].type)
+            console.log(i)
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `         <div class="step  ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color} !important">
                                     <label style="color:${textColor} !important" class="h6 margin-none">${questions[i].text}</label>
@@ -111,20 +114,20 @@ html = html+ `         <div class="step  ${start}" id="${i}">
 
 
                         `
-}
-if(questions[i].type=="checkbox"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ``
-}
-if(questions[i].type=="color"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "checkbox") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ``
+        }
+        if (questions[i].type == "color") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
          <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -150,13 +153,13 @@ if(questions[i].type=="color"){
                             </div>
                         </div>
      `
-}
-if(questions[i].type=="date"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ `         
+        }
+        if (questions[i].type == "date") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `         
     <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -179,13 +182,13 @@ if(questions[i].type=="date"){
                                 </div>
                             </div>
                         </div>`
-}
-if(questions[i].type=="datetime-local"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "datetime-local") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -210,13 +213,13 @@ if(questions[i].type=="datetime-local"){
                         </div>
 
      `
-}
-if(questions[i].type=="email"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "email") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -241,13 +244,13 @@ if(questions[i].type=="email"){
                         </div>
 
      `
-}
-if(questions[i].type=="file"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ `       
+        }
+        if (questions[i].type == "file") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `       
      <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -273,14 +276,14 @@ if(questions[i].type=="file"){
                             </div>
                         </div>
 `
-}
+        }
 
-if(questions[i].type=="month"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        if (questions[i].type == "month") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -304,13 +307,13 @@ if(questions[i].type=="month"){
                             </div>
                         </div>
      `
-}
-if(questions[i].type=="number"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "number") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -335,24 +338,24 @@ if(questions[i].type=="number"){
                         </div>
 
      `
-}
-if(questions[i].type=="submit"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "submit") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}" style="padding-top:70px !important">
             <center><span class="button next" id="Submit" style="position:absolute; left:30%;" onclick="submitForm('${questions[i].redirect}')">${questions[i].text}</span></center>
         </div>
      `
-}
-if(questions[i].type=="range"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "range") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -376,14 +379,14 @@ if(questions[i].type=="range"){
                             </div>
                         </div>
       `
-}
+        }
 
-if(questions[i].type=="text"){
-        var start=""
-    if(i == 1){
-        start="start"
-    }
-html = html+ `
+        if (questions[i].type == "text") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `
          <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -405,13 +408,13 @@ html = html+ `
                             </div>
                         </div>
     `
-}
-if(questions[i].type=="time"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "time") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
             <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -434,13 +437,13 @@ if(questions[i].type=="time"){
                                 </div>
                             </div>
                         </div> `
-}
-if(questions[i].type=="url"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ `        
+        }
+        if (questions[i].type == "url") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `        
     <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -463,13 +466,13 @@ if(questions[i].type=="url"){
                                 </div>
                             </div>
                         </div>`
-}
-if(questions[i].type=="week"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "week") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -493,13 +496,13 @@ if(questions[i].type=="week"){
                             </div>
                         </div>
       `
-}
-if(questions[i].type=="message"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html = html+ ` 
+        }
+        if (questions[i].type == "message") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
         <div class="step ${start}" id="${i}">
                             <div class="answer" style="display: block;">
                                 <div class="content" style="background-color:${color} !important">
@@ -520,13 +523,13 @@ if(questions[i].type=="message"){
                             </div>
                         </div>
     `
-}
-if(questions[i].type=="currency"){
-    var start=""
-    if(i == 1){
-        start="start"
-    }
-    html=html+` 
+        }
+        if (questions[i].type == "currency") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + ` 
 
 
          <div class="step ${start}" id="${i}">
@@ -557,13 +560,13 @@ if(questions[i].type=="currency"){
                             </div>
                         </div>
     `
-}
-if(questions[i].type=="textbox"){
-        var start=""
-    if(i == 1){
-        start="start"
-    }
-html = html+ `
+        }
+        if (questions[i].type == "textbox") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `
          <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color}!important">
@@ -585,13 +588,13 @@ html = html+ `
                             </div>
                         </div>
     `
-}
-if(questions[i].type=="contact"){
-        var start=""
-    if(i == 1){
-        start="start"
-    }
-html = html+ `
+        }
+        if (questions[i].type == "contact") {
+            var start = ""
+            if (i == 1) {
+                start = "start"
+            }
+            html = html + `
          <div class="step ${start}" id="${i}">
                             <div class="question" style="display: block;">
                                 <div class="content" style="background-color:${color} !important">
@@ -628,10 +631,10 @@ html = html+ `
                             </div>
                         </div>
                         `
-}
+        }
 
-document.getElementById("StackForm").innerHTML = html
-}
+        document.getElementById("StackForm").innerHTML = html
+    }
 }
 renderQuestions()
 
@@ -639,29 +642,102 @@ renderQuestions()
 
 
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var docId = getParameterByName('formRef');
+fetch('https://stackform.obimedia.agency/forms/' + docId + '-config.js').then(v => {
+    v.text().then(txt => {
+        eval(txt)
+        window.form = form
+        window.questions = questions
+        createForm(form)
+        renderQuestions(questions)
+        window.localStorage.setItem("form", form)
+        window.localStorage.setItem("questions", questions)
+
+    })
+    form = window.localStorage.getItem("form")
+    questions = window.localStorage.getItem("questions")
+})
 
 
-
-function formatCurrency(id){
+function formatCurrency(id) {
     var finalValue
     var input = document.getElementById(id).value
-  var rex = /(^\d{2})|(\d{1,3})(?=\d{1,3}|$)/g,
-      val = input.replace(/^0+|\.|,/g,""),
-      res;
-      
-  if (val.length) {
-    res = Array.prototype.reduce.call(val, (p,c) => c + p)            // reverse the pure numbers string
-               .match(rex)                                            // get groups in array
-               .reduce((p,c,i) => i - 1 ? p + "," + c : p + "." + c); // insert (.) and (,) accordingly
-    res += /\.|,/.test(res) ? "" : ".0";                              // test if res has (.) or (,) in it
-    finalValue = Array.prototype.reduce.call(res, (p,c) => c + p);    // reverse the string and display
-  }
-  if(finalValue==undefined){
-  document.getElementById(id).value = ""
-}else{
-    document.getElementById(id).value = finalValue
+    var rex = /(^\d{2})|(\d{1,3})(?=\d{1,3}|$)/g,
+        val = input.replace(/^0+|\.|,/g, ""),
+        res;
+
+    if (val.length) {
+        res = Array.prototype.reduce.call(val, (p, c) => c + p) // reverse the pure numbers string
+            .match(rex) // get groups in array
+            .reduce((p, c, i) => i - 1 ? p + "," + c : p + "." + c); // insert (.) and (,) accordingly
+        res += /\.|,/.test(res) ? "" : ".0"; // test if res has (.) or (,) in it
+        finalValue = Array.prototype.reduce.call(res, (p, c) => c + p); // reverse the string and display
+    }
+    if (finalValue == undefined) {
+        document.getElementById(id).value = ""
+    } else {
+        document.getElementById(id).value = finalValue
+    }
 }
+
+
+
+function submitForm(redirect) {
+    docId = getParameterByName("formRef")
+    console.log(formResponses)
+    for (var i in questions) {
+        var hello = Object.keys(questions).length
+        if (questions[i].type == "contact") {
+            formResponses[hello += 1] = window[`contactName${i}`]
+            formResponses[hello += 1] = window[`contactEmail${i}`]
+            formResponses[hello += 1] = window[`contactPhone${i}`]
+        }
+
+    }
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify(formResponses)
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://stackform.obimedia.agency/submit/" + docId, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        "value1": owner
+    });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://maker.ifttt.com/trigger/submit_form/with/key/iGaroM-rZ7xjdvyOkN2Z5OXS1EMoq7nFYF9PLalRncS", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+        window.location.href = redirect
+
+
 }
-
-
-
