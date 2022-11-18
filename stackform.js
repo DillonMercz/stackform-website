@@ -692,6 +692,7 @@ function formatCurrency(id) {
 
 
 function submitForm(redirect) {
+    console.log(owner)
     docId = getParameterByName("formRef")
     console.log(formResponses)
     for (var i in questions) {
@@ -715,29 +716,10 @@ function submitForm(redirect) {
         redirect: 'follow'
     };
 
-    fetch("https://stackform.obimedia.agency/submit/" + docId, requestOptions)
+    fetch("https://stackform.obimedia.agency/submit/" + docId+"/"+owner, requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result => window.location.href = redirect)
         .catch(error => console.log('error', error));
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({
-        "value1": owner
-    });
-
-    var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-    };
-
-    fetch("https://maker.ifttt.com/trigger/submit_form/with/key/iGaroM-rZ7xjdvyOkN2Z5OXS1EMoq7nFYF9PLalRncS", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-        window.location.href = redirect
 
 
 }
