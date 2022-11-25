@@ -5,6 +5,7 @@ var buttonColor
 var formResponses = {}
 var form
 var questions
+var owner
 
 function createForm() {
     for (var f in form) {
@@ -12,6 +13,7 @@ function createForm() {
             form[f].options.forEach((config) => {
                 document.getElementById("FormImg").src = config.image
                 document.getElementById("FormTitle").innerHTML = config.title
+                owner = config.owner
 
                 color = config.color
                 textColor = config.textColor
@@ -690,6 +692,7 @@ function formatCurrency(id) {
 
 
 function submitForm(redirect) {
+    console.log(owner)
     docId = getParameterByName("formRef")
     console.log(formResponses)
     for (var i in questions) {
@@ -713,9 +716,10 @@ function submitForm(redirect) {
         redirect: 'follow'
     };
 
-    fetch("https://stackform.obimedia.agency/submit/"+docId, requestOptions)
+    fetch("https://stackform.obimedia.agency/submit/" + docId+"/"+owner, requestOptions)
         .then(response => response.text())
         .then(result => window.location.href = redirect)
         .catch(error => console.log('error', error));
+
 
 }

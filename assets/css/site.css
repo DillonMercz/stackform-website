@@ -1,0 +1,1974 @@
+@import url('/assets/css/reset.css');
+@import url('https://cdn.jsdelivr.net/gh/vaibhav111tandon/vov.css@latest/vov.css');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.1/jquery-ui.min.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Default Layout: 1200px. 		
+------------------------------------------------------------------------------- */
+html, body {width: 100%; font-size: 16px; line-height: 160%; font-family: 'Open Sans', sans-serif; font-weight: 400; color: #081F49; -webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto; -webkit-text-size-adjust: 100%; height: 100%;}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {display: block; clear: both; font-weight: 600; font-family: 'Lexend Deca', sans-serif; line-height: 140%; margin: 0 0 30px 0; z-index: 10; letter-spacing: -0.040em;}
+h1, .h1 {font-size: 80px; word-spacing: -3px; line-height: 115%;}
+h2, .h2 {font-size: 60px; word-spacing: -2px; line-height: 125%;}
+h3, .h3 {font-size: 35px; word-spacing: -1px; letter-spacing: -0.030em;}
+h4, .h4 {font-size: 28px; letter-spacing: -0.020em;}
+h5, .h5 {font-size: 22px; letter-spacing: -0.020em;}
+h6, .h6, div.checkbox-list ul li {font-size: 18px; letter-spacing: -0.015em;}
+
+
+p, .p {margin: 0 0 30px 0; display: block; clear: both; width: 100%; z-index: 10;}
+a {color: #081F49;}
+strong {font-weight: 600;}
+table {border: 0; margin: 0 0 30px 0; padding: 0; width: 100%; border-bottom: 2px solid #F3F6F9; width: 100%;}
+table thead {position: -webkit-sticky; position: sticky; top: 0; left: 0; z-index: 100;}
+table th, table td {text-align: left;}
+table thead th, table tfoot th {font-weight: 600; background: #F3F6F9; border-bottom: 2px solid #E4EBF1!important; padding: 20px!important; font-size: 12px; line-height: 160%;}
+table tfoot th, table tfoot td {border-top: 2px solid #F3F6F9!important; background: none; color: #081F49;}
+table tbody td {padding: 15px 20px!important; font-size: 14px; line-height: 160%; vertical-align: middle; border-top: 1px solid #D6E0EA;}
+table tbody tr:first-of-type td {border-top: 0;}
+table td p:last-of-type {margin: 0;}
+table td .h6 {margin: 0;}
+table tbody tr {border: 0; vertical-align: top;}
+table tr table {margin: 0 0 5px 0; border-bottom: 0; table-layout: fixed; border-collapse: collapse;}
+table tr table tr {padding: 0;}
+table tr table td {vertical-align: top;}
+table tr table td:last-of-type {border-right: 0;}
+table tr table td, table tr table td:first-of-type, table tr table td:last-of-type {padding: 20px 30px!important;}
+table tr table td ul {padding: 15px 0 0 0;}
+table tr table td ul li {border-bottom: 1px solid #E4EBF1; padding: 0 0 5px 0; margin: 0 0 5px 0; float: left; width: 100%; display: block; clear: both; font-size: 14px; line-height: 160%;}
+table tr table td ul li:last-of-type {border: 0; margin: 0; padding: 0;}
+table#notifications_table thead {display: none;}
+#notifications_table_wrapper div.dataTables_length {display: none;}
+#notifications_table_wrapper div.dataTables_filter, #notifications_table_wrapper div.dataTables_filter label, #notifications_table_wrapper div.dataTables_filter label input {margin: 0; float: left;}
+
+
+table.inline {border-collapse: collapse; table-layout: fixed; border: 2px solid #F3F6F9;}
+table.inline div.basic-list {margin: 0;}
+table.inline div.basic-list ul {padding: 0; margin: 0;}
+table.inline div.basic-list ul li {padding: 0 0 0 15px;}
+table.inline div.basic-list ul li:before {top: 7px; width: 5px; height: 5px;}
+table.inline thead {position: relative;}
+table.inline thead th, table.inline tfoot th {border-bottom: 0!important;}
+table.inline tbody td {border: 0; border-right: 2px solid #F3F6F9; border-top: 2px solid #F3F6F9; vertical-align: top; font-size: 12px; line-height: 160%;}
+table.inline tbody td p {margin: 0 0 10px 0;}
+table.inline tbody td p:last-of-type {margin: 0;}
+
+
+svg {display: block; fill: #081F49;}
+i {margin: 0 5px 0 0;}
+button {border: 0; outline: none; font-family: 'Lexend Deca', sans-serif; cursor: pointer; font-size: 16px; line-height: 160%;}
+button:disabled, .button.disabled {background: #E4EBF1; color: #081F49; opacity: 0.50; cursor: not-allowed; filter: grayscale(100%); -moz-animation: none!important; -o-animation: none!important; animation: none!important;}
+hr {display: block; clear: both; height: 2px; background: #F3F6F9; margin: 0 0 15px 0;}
+hr.clear {background: none; margin: 0;}
+.button {background: #185DDC; position: relative; color: #FFFFFF; padding: 15px 30px; cursor: pointer; font-weight: 600; z-index: 50; text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; float: left; letter-spacing: -0.015em; font-family: 'Lexend Deca', sans-serif;}
+.button.larger {padding: 20px 60px; font-size: 20px;}
+.button.smaller {padding: 15px 30px;}
+.button.smallest {padding: 10px 30px; font-size: 14px;}
+.button.full {display: block; width: 100%;}
+.button.background-grey, .button.background-white, .button.background-yellow, .button.background-white {color: #081F49!important;}
+.button.background-none {background: none; color: #081F49;}
+.button:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(24,93,220,0.15); box-shadow: 0px 0px 0px 4px rgba(24,93,220,0.15);}
+.button.background-yellow:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(255,201,20,0.15);  box-shadow: 0px 0px 0px 4px rgba(255,201,20,0.15);}
+.button.background-blue:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(24,93,220,0.15); box-shadow: 0px 0px 0px 4px rgba(24,93,220,0.15);}
+.button.background-green:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(9,188,138,0.15);  box-shadow: 0px 0px 0px 4px rgba(9,188,138,0.15);}
+.button.background-white:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(8,31,73,0.15);  box-shadow: 0px 0px 0px 4px rgba(8,31,73,0.15);}
+.button.background-grey:active {-webkit-box-shadow: 0px 0px 0px 4px rgba(8,31,73,0.05);  box-shadow: 0px 0px 0px 4px rgba(8,31,73,0.05);}
+.button.padding-left-right-none {padding: 20px 0;}
+.button.padding-none {padding: 0;}
+.margin-normal {margin: 0 0 30px 0!important;}
+.margin-more {margin: 0 0 50px 0!important;}
+.margin-half {margin: 0 0 15px 0;}
+.margin-quarter {margin: 0 0 5px 0;}
+.margin-none {margin: 0!important;}
+.margin-top-half {margin: 15px 0 0 0;}
+.background-blue {background: #185DDC!important;}
+.background-dark-blue {background: #081F49!important;}
+.background-green {background: #09BC8A!important;}
+.background-dark-green {background: #079C72!important;}
+.background-yellow {background: #FFC914!important;}
+.background-red {background: #DD1C1A!important;}
+.background-grey {background: #F3F6F9!important;}
+.background-dark-grey {background: #E4EBF1!important;}
+.background-darkest-grey {background: #D6E0EA!important;}
+.background-white {background: #FFFFFF!important;}
+.background-none {background: none!important; -webkit-box-shadow: none!important; box-shadow: none!important;}
+.background-blue *, .background-green *, .background-dark-green *, .background-dark-blue *, .background-red * {color: #FFFFFF;}
+.border-grey {border: 2px solid #F3F6F9!important;}
+.border-dark-grey {border: 2px solid #E4EBF1!important;}
+.border-darkest-grey {border: 2px solid #D6E0EA!important;}
+.border-blue {border: 2px solid #185DDC;}
+.border-dark-blue {border: 2px solid #081F49;}
+.border-yellow {border: 2px solid #FFC914;}
+.border-red {border: 2px solid #DD1C1A!important;}
+.border-green {border: 2px solid #09BC8A;}
+.border-bottom-green {border-bottom: 2px solid #09BC8A;}
+.border-top-grey {border-top: 2px solid #F3F6F9;}
+.text-color-blue {color: #185DDC!important;}
+.text-color-grey {color: #F3F6F9!important;}
+.text-color-dark-grey {color: #E4EBF1!important;}
+.text-color-darkest-grey {color: #D6E0EA!important;}
+.text-color-green {color: #09BC8A!important;}
+.text-color-dark-green {color: #079C72!important;}
+.text-color-yellow {color: #FFC914!important;}
+.text-color-red {color: #DD1C1A!important;}
+.text-color-standard {color: #081F49!important;}
+.text-color-white {color: #FFFFFF!important;}
+.text-size-smaller {font-size: 14px; line-height: 160%;}
+.text-size-smallest {font-size: 12px; line-height: 160%;}
+.text-size-smallest-promise {font-size: 10px; line-height: 160%;}
+.text-size-largest {font-size: 110px;}
+.text-align-center {text-align: center;}
+.text-align-left {text-align: left;}
+.text-align-right {text-align: right;}
+.text-style-uppercase {text-transform: uppercase;}
+.text-style-lowercase {text-transform: lowercase;}
+.text-style-italic {font-style: italic;}
+.text-weight-400 {font-weight: 400;}
+.text-weight-600 {font-weight: 600;}
+.text-weight-700 {font-weight: 700;}
+.text-vertical-align-middle {vertical-align: middle; display: inline-block;}
+.text-capitalise-first-letter {text-transform: capitalize;}
+.text-sentence-case:first-letter {text-transform: uppercase;}
+.text-email-address {word-break: break-all;}
+.text-base-font {font-family: 'Open Sans', sans-serif;}
+.link {cursor: pointer; text-decoration: underline;}
+.clear {display: block; clear: both; letter-spacing: 0;}
+.padding-none {padding: 0!important;}
+.float-left {float: left!important; clear: none!important; margin: 0!important;}
+.float-right {float: right!important; clear: none!important; margin: 0!important;}
+.updating {opacity: 0.20;}
+.hide {display: none!important;}
+.size-smaller {width: 600px; max-width: 100%; margin: 0 auto 30px auto;}
+.timestamp {display: block; margin: 0; padding: 10px 0 0 0; color: #D6E0EA; text-align: left;}
+.timestamp:before {content: '\f017'; font: var(--fa-font-regular); text-rendering: auto; -webkit-font-smoothing: antialiased; margin: 0 5px 0 0;}
+.height-full {min-height: 100vh;}
+.fixed-message {position: absolute; top: 0; left: 0; margin: 0; z-index: 100;}
+.opacity-60 {opacity: 0.30;}
+.animate__fadeIn, .animate__fadeInUp {visibility: visible!important;}
+.corners-round {-webkit-border-radius: 10px!important; -moz-border-radius: 10px!important; border-radius: 10px!important;}
+.line-break {display: block; clear: both;}
+.line-break:empty {display: none;}
+.disable-scroll {overflow: hidden; height: 100%;}
+.blurred-backdrop {z-index: 200;}
+.curved-edges {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+.select-none {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.ui-autocomplete {position: absolute; top: 100%; left: 0; z-index: 250; display: none; float: left; min-width: 160px; word-break: break-word; padding: 5px 0; margin: 2px 0 0; list-style: none; font-size: 16px; text-align: left; background: #FFFFFF; border: 2px solid #FFFFFF!important; border-radius: 10px; -webkit-box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); background-clip: padding-box; max-height: 350px; overflow-y: scroll;}
+.ui-autocomplete > li > div {display: block; padding: 5px 20px; clear: both; width: 100%; font-weight: normal; line-height: 1.42857143; color: #081F49; font-family: 'Lexend Deca', sans-serif; font-weight: 400;}
+.ui-state-active,
+.ui-state-focus {text-decoration: none; color: #185DDC; background-color: #185DDC; border: 1px solid #185DDC!important; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor: pointer;}
+.ui-helper-hidden-accessible {border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+.ui-tooltip {padding: 5px 10px; font-size: 10px; line-height: 160%; font-family: 'Lexend Deca', sans-serif; font-weight: 400; color: #081F49; -webkit-box-shadow: none; box-shadow: none; border: 2px solid #E4EBF1!important; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+::-webkit-scrollbar {height: 8px; width: 8px; background-color: transparent;}
+::-webkit-scrollbar-thumb {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background-color: #A0B8CF;}
+::-webkit-scrollbar-track {background: #FFFFFF;}
+
+
+#inside_timeframe {display: none;}
+body.time_conditional #inside_timeframe {display: block;}
+body.time_conditional #outside_timeframe, body.time_conditional div.progress {display: none;}
+
+
+header {height: 120px; z-index: 300; width: 100%;}
+header div.logo {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); margin: 0;}
+header div.fca-logo {width: 100px; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+header nav {position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+header nav.right {left: auto; right: 0;}
+header nav.right ul li {float: left; margin: 0 0 0 15px;}
+header nav.right ul li:first-of-type {margin: 0;}
+header div.wrap {height: 100%;}
+
+
+footer {display: block; clear: both; width: 100%;}
+footer div.logo {width: 100px; display: block; clear: both; margin: 0 auto 30px auto;}
+footer ul {text-align: center;}
+footer ul li {display: inline-block; margin: 0 15px 15px 15px;}
+footer ul li a {text-decoration: underline;}
+
+
+div.logo {width: 160px; max-width: 100%; z-index: 15; margin: 0 0 60px 0;}
+div.logo svg .cls-2 {fill: #09BC8A; stroke: #09BC8A; stroke-width: 0;}
+div.logo.animated svg .cls-2 {fill: none; stroke: #09BC8A;}
+div.logo.animated svg .cls-3 path {fill: #09BC8A; fill: #09BC8A;}
+div.logo.smaller {width: 100px; margin: 0 0 15px 0;}
+div.logo.mark {margin: 0 auto 30px auto; width: 150px;}
+div.logo.mark svg {fill: #09BC8A!important;}
+div.logo.mark.white svg {fill: #FFFFFF!important;}
+
+
+div.basic-list {margin: 0 0 30px 0;}
+div.basic-list.margin-half {margin: 0 0 15px 0;}
+div.basic-list ul, div.basic-list ol {display: block; clear: both; padding: 0 0 0 15px;}
+div.basic-list ul li, div.basic-list ol li {display: block; clear: both; padding: 0 0 0 25px; word-wrap: break-word; word-break: break-word;}
+div.basic-list ul li:before {position: absolute; top: 8px; left: 0; width: 10px; height: 10px; background: #09BC8A; content: ''; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.basic-list.text-size-smaller ul li:before {top: 6px;}
+div.basic-list.text-size-smallest ul li:before {top: 7px; width: 5px; height: 5px;}
+div.basic-list ul ul, div.basic-list ol ol {padding: 5px 0 5px 25px;}
+div.basic-list ul ul li:before {top: 11px; width: 5px; height: 5px;}
+div.basic-list ol {counter-reset: item;}
+div.basic-list ol li:before {position: absolute; top: 0; left: 0; content: counters(item, ".") " "; counter-increment: item; color: #09BC8A; margin: 0;}
+div.basic-list ol ol li:before {font-size: 10px; line-height: 160%; top: 5px;}
+div.basic-list.inline ul li, div.basic-listinline ol li {clear: none; float: left; padding: 0 0 0 15px; margin: 0 10px 0 0;}
+
+
+div.lender-logos {width: 130%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 5;}
+div.lender-logos div.lender-logo {margin: 0 80px 0 0; padding: 15px 0; background: #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 2px solid #E4EBF1;}
+div.lender-logos div.lender-logo img {width: 70%; margin: 0 auto;}
+div.lender-logos .slick-list {overflow: visible;}
+
+
+div.media-logo {width: 90%; max-width: 200px; margin: 0 auto;}
+
+
+div.switcheroo div.image.primary {opacity: 1; z-index: 2;}
+div.switcheroo div.image.secondary {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+div.switcheroo.switch div.image.primary {opacity: 0;}
+
+
+div.play {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 5; cursor: pointer; width: 80px; height: 80px; background: #FFFFFF; border: 6px solid #09BC8A; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; -webkit-box-shadow: 0px 0px 0px 10px #FFFFFF;  box-shadow: 0px 0px 0px 10px #FFFFFF; display: block;}
+div.play.darker {background: #09BC8A; border: 6px solid #FFFFFF; -webkit-box-shadow: 0px 0px 0px 10px #09BC8A;  box-shadow: 0px 0px 0px 10px #09BC8A;}
+div.play.darker i {color: #FFFFFF;}
+div.play.laptop {top: 40%;}
+div.play i {font-size: 35px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #09BC8A; margin: 0;}
+div.play-instruction {position: absolute; top: -30px; left: -35px; z-index: 6; -webkit-animation: animation-play-video 2s infinite  alternate; animation: animation-play-video 2s infinite  alternate; display: block;}
+div.play-instruction svg {width: 80px; position: absolute; top: 30px; left: 0;}
+div.play-instruction.free {top: -100px; left: -110px;}
+div.play-instruction.free span {color: #09BC8A!important;}
+div.play-instruction.free svg {fill: #09BC8A!important;;}
+
+
+div.hero div.content {padding: 80px 130px 50px 130px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.hero div.call-to-actions {margin: 0 0 30px 0;}
+div.hero div.circle {width: 30%; height: 0; padding-bottom: 30%; background: #FFFFFF; -webkit-box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); position: absolute; top: 8%; left: -15%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.hero div.circle.two {top: auto; bottom: -10%; left: auto; right: -10%;}
+div.hero div.circle div.image {width: 100%; height: 100%; position: absolute; top: 0; left: 0; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; border: 15px solid #FFFFFF;}
+div.hero div.circle.smaller {width: 25%; padding-bottom: 25%; left: -12%;}
+div.hero div.checkbox-list {padding: 30px 0 0 0; text-align: center; float: left; width: 100%;}
+div.hero div.checkbox-list ul {display: block; clear: both; float: left; width: 100%;}
+div.hero div.checkbox-list ul li {font-weight: 400; display: block; clear: both; margin: 0 0 15px 0; padding: 0 0 0 40px; text-align: left; line-height: 160%;}
+div.hero div.checkbox-list ul li:last-of-type {margin: 0;}
+div.hero div.checkbox-list ul li:before {content: '\f058'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; position: absolute; top: 5px; left: 0; color: #FFC914;}
+div.hero div.checkbox-list ul li:after {display: none; width: 12px; height: 12px; position: absolute; top: 4px; left: 2px; background: #081F49; z-index: -1; content: ''; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.hero.collective {margin: 0;}
+div.hero.collective div.content {padding: 100px 130px 38% 130px;}
+div.hero.collective div.image {width: 60%; margin: 0 auto; bottom: -9.5%; position: absolute; left: 50%; transform: translateX(-50%);}
+
+
+div.call-to-actions ul {text-align: center;}
+div.call-to-actions ul li {display: inline-block; margin: 0 5px;}
+div.call-to-actions.full ul li {display: block; clear: both; width: 100%; margin: 0 0 10px 0; float: left; text-align: center;}
+div.call-to-actions.full ul li .button {display: inline-block; float: none;}
+
+
+div.information-summary {margin: 0 0 30px 0; float: left; width: 100%;}
+div.information-summary ul {width: 100%; float: left;}
+div.information-summary ul li {border-bottom: 2px solid #F3F6F9; padding: 0 0 5px 0; margin: 0 0 5px 0; float: left; width: 100%; display: block; clear: both; word-break: break-word;}
+div.information-summary ul li:last-of-type {border-bottom: 0; margin: 0;}
+div.information-summary ul li .left, div.information-summary ul li .right {float: left; display: block; width: 40%; word-break: break-word; padding: 0 15px 0 0;}
+div.information-summary ul li .right {width: 60%; font-weight: 600; padding: 0;}
+
+
+div.tab-menu ul {display: flex;}
+div.tab-menu ul li {padding: 15px 0; flex: 1; background: #F3F6F9; cursor: pointer; border-bottom: 2px solid #E4EBF1;}
+div.tab-menu ul li p {font-weight: 400;}
+div.tab-menu ul li.active {background: #FFFFFF; border-bottom: 2px solid #FFFFFF;}
+div.tab-menu ul li.active p:first-of-type {color: #09BC8A;}
+div.tab-menu ul li p {margin: 0; text-align: center;}
+
+
+div.accordion {float: left; width: 100%; display: block; clear: both;}
+div.accordion div.accordion-tab {background: #F3F6F9; padding: 20px 70px 20px 40px; cursor: pointer; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; margin: 0 0 10px 0; clear: both;}
+div.accordion div.accordion-tab p {margin: 0;}
+div.accordion div.accordion-tab:after {position: absolute; content: '\f078'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; top: 50%; right: 40px; transform: translateY(-50%); display: block;}
+div.accordion div.accordion-tab.active {background: #185DDC; color: #FFFFFF;}
+div.accordion div.accordion-tab.active:after {content: '\f077';}
+div.accordion div.accordion-content {padding: 20px 40px 30px 40px; float: left; width: 100%; display: none;}
+div.accordion div.accordion-content ul {float: left; width: 100%; clear: both;}
+div.accordion div.accordion-content ul li {width: 100%; clear: both;}
+div.accordion div.accordion-content ul li:nth-of-type(2n) {float: right;}
+div.accordion div.accordion-content p:last-of-type {margin: 0;}
+
+
+div.loading {position: absolute; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; display: none;}
+div.loading div.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #FFFFFF; opacity: 0.60;}
+
+
+div.confetti-pop:before {position: absolute; bottom: 0; left: 0; width: 100%; background: none; background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); content: ''; height: 60px; z-index: 3;}
+div.confetti-pop.no-fade:before {display: none;}
+div.confetti-pop.central {display: block; clear: both; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%;}
+div.confetti-pop.central #footer_confetti, div.confetti-pop.central #thank_you_confetti {width: 100%; height: 60vh;}
+
+
+div.trustpilot {width: 100px; margin: 0 auto;}
+
+
+div.wrap {width: 90%; max-width: 1200px; margin: 0 auto; z-index: 250;}
+div.wrap.largest {max-width: 1800px;}
+div.wrap.larger {max-width: 1400px;}
+div.wrap.smaller {max-width: 1000px;}
+div.wrap.smallest {max-width: 800px;}
+div.wrap.smallest-promise {max-width: 600px;}
+div.wrap:after {content: ''; display: block; clear: both;}
+div.wrap.legal-pages div.logo {display: none;}
+
+
+div.progress ul {counter-reset: step-counter 0;}
+div.progress ul li {display: block; clear: both; margin: 0 0 20px 0; padding: 0 0 0 50px; counter-increment: step-counter 1; color: #C9D6E4;}
+div.progress ul li.animation-flicker {display: none;}
+div.progress ul li:before {width: 30px; height: 30px; line-height: 30px!important; position: absolute; top: -5px; left: 0; z-index: 2; border: 2px solid #C9D6E4; background: #FFFFFF; font-size: 16px!important; text-align: center; content: counter(step-counter) ' '; font-weight: 600; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: #C9D6E4; font-weight: 400;}
+div.progress ul li.complete:before {content: '\f00c'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; background: #09BC8A; border: 2px solid #09BC8A; color: #FFFFFF;}
+div.progress ul li.active:before {background: #185DDC; border: 2px solid #185DDC; color: #FFFFFF;}
+div.progress ul li.active, div.progress ul li.complete {color: #081F49;}
+div.progress ul li.active .animation-flicker {display: block;}
+
+
+div.steps {padding: 60px 0 0 0;}
+div.steps div.step {padding: 60px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+
+
+div.spacer {display: block; clear: both; height: 30px;}
+div.spacer.triple {height: 100px;}
+div.spacer.double {height: 60px;}
+div.spacer.half {height: 15px;}
+div.spacer.quarter {height: 10px;}
+
+
+div.mortgage-list {display: block; clear: both; margin: 0; z-index: 5; float: left; width: 100%;}
+div.mortgage-list div.mortgage {display: block; clear: both; background: #FFFFFF; border: 2px solid #F3F6F9; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; margin: 0 0 20px 0; overflow: hidden;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .button {position: absolute; top: 50%; transform: translateY(-50%); right: 20px; padding: 5px 15px; font-size: 12px;}
+div.mortgage-list div.mortgage div.flex-container.header div.column, div.mortgage-list div.mortgage div.flex-container.footer div.column {margin: 0; border: 0; flex-basis: 100%; border: 0;}
+div.mortgage-list div.mortgage div.flex-container.header div.column {padding: 10px 20px; min-height: 100px;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .h4, div.mortgage-list div.mortgage div.flex-container.header div.column .h6 {position: absolute; top: 50%; left: 0; padding: 0 130px 0 115px; transform: translateY(-50%); clear: none; width: auto;}
+div.mortgage-list div.mortgage div.flex-container.footer div.column {padding: 15px 20px; margin: 0; border-top: 2px solid #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column {padding: 5px 10px 10px 20px; flex-basis: 33.333333%; border-top: 2px solid #F3F6F9; border-right: 2px solid #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.body div.column .h6 {font-size: 16px; line-height: 140%;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 80px; height: 80px; background: #FFFFFF; border: 2px solid #F3F6F9; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender img {width: 65%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+div.mortgage-list div.mortgage div.help {padding: 0;}
+div.mortgage-list div.mortgage div.help div.help-content {background: #F3F6F9;}
+div.mortgage-list div.mortgage div.help div.help-content:before {border-color: transparent transparent #F3F6F9 transparent;}
+div.mortgage-list.one-row div.mortgage div.flex-container.header div.column {background: #F3F6F9;}
+div.mortgage-list.one-row div.mortgage div.flex-container.header div.column div.lender {border: 0;}
+
+
+div.modal div.mortgage-list div.mortgage div.flex-container {padding: 0!important;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column {padding: 10px 20px; min-height: 130px; background: #F3F6F9;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column .h4 {padding: 0 20px 0 145px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 110px; height: 110px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.footer div.column {padding: 15px 20px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 16.666666%; padding: 10px 20px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+
+
+div.mortgage_results_loading {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #F3F6F9; z-index: 501!important; text-align: center; display: block;}
+div.mortgage_results_loading div.logo {width: 100%; content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); -webkit-animation: animation-flicker 2s infinite; -moz-animation: animation-flicker 2s infinite; -o-animation: animation-flicker 2s infinite; animation: animation-flicker 2s infinite;}
+div.mortgage_results_loading div.logo svg {width: 100px; margin: 0 auto 15px auto;}
+div.mortgage_results_loading#trigger_final_lead_loading {display: none; position: fixed;}
+
+
+div#mortgage-list-pagination {display: block; clear: both; width: 100%; float: left;}
+div#mortgage-list-pagination ul li {display: inline-block; margin: 0 0 0 5px; font-size: 12px; line-height: 140%;}
+div#mortgage-list-pagination ul li a, div#mortgage-list-pagination ul li .current {padding: 5px 10px; display: block;}
+div#mortgage-list-pagination ul li a, div#mortgage-list-pagination ul li.active, div#mortgage-list-pagination ul li.disabled {background: #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 2px solid #F3F6F9;}
+div#mortgage-list-pagination ul li.active {background: #E4EBF1; border: 2px solid #E4EBF1;}
+div#mortgage-list-pagination ul li.disabled {color: #D6E0EA!important;}
+
+
+div.video {width: 100%; cursor: pointer; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; overflow: hidden;}
+div.video video {width: 100%;}
+
+
+div.device-shape {position: relative; top: 0; left: 0; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #FFFFFF; outline: 8px solid #081F49;}
+div.device-shape.align-center {margin: 0 auto;}
+div.device-shape.phone {width: 250px; height: 470px;}
+div.device-shape div.screen {position: absolute; top: 0; left: 0; width: 100%; height: 100%; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.device-shape div.screen.img-1 {background: url(/assets/img/photos/12.png) no-repeat center center; background-size: 240px auto;}
+div.device-shape div.screen.img-2 {background: url(/assets/img/photos/13.png) no-repeat center center; background-size: 240px auto;}
+div.device-shape div.screen.img-3 {background: url(/assets/img/photos/14.png) no-repeat center center; background-size: 240px auto;}
+div.device-shape div.screen.img-4 {background: url(/assets/img/photos/15.png) no-repeat center center; background-size: 270px auto;}
+
+
+div.modal {position: fixed; display: none; top: 0; left: 0; width: 100%; height: 100%; z-index: 500; overflow-y: scroll; -webkit-overflow-scrolling: touch;}
+div.modal:before {position: fixed; top: 0; left: 0; width: calc(100% - 8px); height: 100%; background: #F3F6F9; opacity: 0.90; content: '';}
+div.modal div.logo {margin: 0 0 30px 0; clear: both;}
+div.modal div.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #FFFFFF; opacity: 0.60;}
+div.modal div.close {width: 30px; height: 30px; line-height: 30px; position: sticky; top: 15px; clear: both; float: right; background: #FFC914; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; font-weight: 600; text-transform: uppercase; text-align: center; cursor: pointer; z-index: 150; margin: 0 0 10px 0;}
+div.modal div.close i {margin: 0;}
+div.modal div.flex-container {padding: 30px 0; min-height: 100vh; width: 100%; clear: both;}
+div.modal div.flex-container div.column {padding: 60px 100px 100px 100px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #FFFFFF; -webkit-box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); align-self: center;}
+div.modal div.flex-container div.column:last-of-type {margin: 0;}
+div.modal div.flex-container div.column div.flex-container {padding: 15px 0; min-height: auto;}
+div.modal div.flex-container div.column div.flex-container div.column {-webkit-box-shadow: none;  box-shadow: none; background: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; padding: 0; align-self: flex-start;}
+div.modal div.flex-container div.column div.flex-container {justify-content: space-between;}
+div.modal div.flex-container div.column div.flex-container div.column hr {margin: 0 0 30px 0;}
+div.modal div.flex-container div.column div.flex-container div.column form {margin: 0 0 15px 0;}
+div.modal div.flex-container div.column div.flex-container div.column .status {display: table; width: auto;}
+div.modal div.call-to-actions ul li {display: block; clear: both; float: left; width: 100%; margin: 0 0 10px 0;}
+div.modal div.call-to-actions ul li .button {display: block; width: 100%;}
+div.modal.video_display div.flex-container {height: 100%;}
+div.modal div.flex-container div.column.busy:before, div.modal div.flex-container div.column.complete:before {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #FFFFFF; z-index: 145!important; text-align: center; display: block; content: ''; opacity: 0.90; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.modal div.flex-container div.column.busy:after {width: 80px; height: 80px; background: url(/assets/img/svg/favicon.svg) no-repeat center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 146; content: ''; -webkit-animation: animation-rotate 1s infinite; -moz-animation: animation-rotate 1s infinite; -o-animation: animation-rotate 1s infinite; animation: animation-rotate 1s infinite;}
+div.modal div.flex-container div.column.complete:after {display: block; padding: 20px 40px; font-weight: 600; font-family: 'Lexend Deca', sans-serif; line-height: 140%; color: #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #09BC8A; -webkit-box-shadow: 0px 0px 30px 0px rgba(4,16,37,0.10); box-shadow: 0px 0px 30px 0px rgba(4,16,37,0.10); margin: 0; overflow: hidden; content: 'Your request for a call-back has already been sent'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 200; width: 250px; text-align: center; max-width: 50%;}
+
+
+div.flex-container {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; justify-content: flex-start; z-index: 40; padding: 0;}
+div.flex-container.half-circle {overflow: hidden; padding: 0 0 100px 0;}
+div.flex-container.half-circle:after {position: absolute; top: 40%; left: -30%; width: 110%; height: 0; padding-bottom: 100%; content: ''; border: 5px solid #E4EBF1; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.flex-container.half-circle.reverse-order:after {left: auto; right: -30%;}
+div.flex-container.half-circle.final:after {display: none;}
+div.flex-container.half-circle div.column {padding: 0;}
+div.flex-container div.column {padding: 30px; flex-direction: column; align-items: flex-start; z-index: 40; flex-basis: calc((100% / 1));}
+div.flex-container.padding-top-bottom-none div.column {padding: 0 30px;}
+div.flex-container.twenty-fifty-thirty div.column {padding: 0 5%; align-self: stretch;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {padding: 0 6% 0 4%; flex-basis: 51.5%; border-left: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer {padding: 0 0 90px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer * {font-size: 12px; line-height: 160%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer ul {text-align: left;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer ul li {display: block; float: left; margin: 0 30px 0 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer div.logo {display: block; float: left; margin: 0 0 30px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 16%; padding: 0 2%; z-index: 100;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {flex-basis: 32.5%; padding: 0; z-index: 300; z-index: 200; background: #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results * {z-index: 205;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {padding: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: block; clear: both; width: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(243,246,249,1) 0%, rgba(243,246,249,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary div.confetti-pop {display: none; position: absolute; width: 100%; height: 100%}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary div.confetti-pop:before {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop #mortgage_form_results_confetti, div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop #mortgage_form_results_confetti_2 {width: 100%; height: 350px;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary .notification_text {color: #FFFFFF;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {background: #FFFFFF; height: 70px; padding: 0; width: 100%; float: left; display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {position: -webkit-sticky; position: sticky;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary .button {position: absolute; top: 50%; right: 5%; transform: translateY(-50%); z-index: 3;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary #mortgage_form_results_notification {position: absolute; top: 50%; left: 5%; transform: translateY(-50%); display: none; z-index: 3;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary #mortgage_form_results_notification i {color: #FFC914;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary #mortgage_form_results_notification.text-color-dark-grey i {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {margin: 0 0 30px 0; padding: 60px 10%; display: none; clear: both; z-index: 200; -webkit-box-shadow: none; box-shadow: none; max-height: 100vh; overflow-y: scroll;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content.show {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {left: 10%; top: 0; width: 80%; padding: 30px 0 0 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message .column {padding: 0 30px 0 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message .column:last-of-type {padding: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message .circle {border: 10px solid #FFFFFF;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.flex-container.four div.column {flex-basis: calc((100% / 4));}
+div.flex-container.sixty-forty div.column {flex-basis: 60%; padding: 30px;}
+div.flex-container.sixty-forty div.column:last-of-type {flex-basis: 40%;}
+div.flex-container.seventy-thirty div.column {flex-basis: 70%; padding: 30px;}
+div.flex-container.seventy-thirty div.column:last-of-type {flex-basis: 30%;}
+div.flex-container.center-vertically {align-items: center;}
+div.flex-container.center-vertically div.column {align-self: center;}
+div.flex-container.center-vertically div.column div.content {align-self: center;}
+div.flex-container.center-horizontally {align-items: center!important; justify-content: center;}
+div.flex-container.six div.column {flex-basis: calc(100% / 6);}
+div.flex-container.five div.column {flex-basis: calc(100% / 5);}
+div.flex-container.four div.column {flex-basis: calc(100% / 4);}
+div.flex-container.three div.column {flex-basis: calc(100% / 3);}
+div.flex-container.two div.column {flex-basis: calc(100% / 2);}
+div.flex-container div.column.seventy {flex-basis: 69%;}
+div.flex-container div.column.sixty {flex-basis: 59%;}
+div.flex-container div.column.fifty {flex-basis: 49%;}
+div.flex-container div.column.forty {flex-basis: 39%;}
+div.flex-container div.column.thirty {flex-basis: 29%;}
+div.flex-container div.column.thirty-five {flex-basis: 34%;}
+div.flex-container div.column.twenty {flex-basis: 19%;}
+div.flex-container div.column.sixteen {flex-basis: 16.666666%;}
+div.flex-container div.column.image {min-height: 250px; align-self: stretch; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+div.flex-container.reverse-order div.column:first-of-type {order: 2;}
+div.flex-container.reverse-order .logo-mark {right: auto; left: 30px;}
+div.flex-container div.circle {border: 15px solid #FFFFFF; background: #FFFFFF; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; -webkit-box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15); box-shadow: 0px 0px 90px 0px rgba(4,16,37,0.15);}
+div.flex-container div.image {width: 100%; height: 0; padding-bottom: 100%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.flex-container div.column .logo-mark {width: 70px; position: absolute; top: 5%; right: 30px; background: #FFFFFF; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; border: 10px solid #FFFFFF; -webkit-animation: action-2 2s infinite alternate; animation: action-2 2s infinite alternate; z-index: 3;}
+div.flex-container div.column .logo-mark svg {fill: #09BC8A;}
+div.flex-container.logos {padding: 50px 0 0 0;}
+div.flex-container.logos div.column {padding: 0 30px;}
+div.flex-container.logos div.column svg {width: 90%;}
+div.flex-container.align-center {justify-content: center;}
+.travel {display: flex; justify-content: space-around; align-items: flex-start;}
+.traveller {position: -webkit-sticky; position: sticky; top: 0; display: block; z-index: 60; padding: 60px 0;}
+
+
+div.login-form {display: block; margin: 0 auto 30px auto; overflow: hidden; padding: 40px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #F3F6F9;}
+div.login-form div.answer div.content {margin: 0; background: none;}
+div.login-form form {padding: 0; float: none;}
+div.login-form div.answer {display: block; width: 100%; max-width: 100%; padding: 0;}
+div.login-form div.answer div.content {padding: 0;}
+
+
+div.help {display: block; clear: both; padding: 15px 0 0 0;}
+div.help div.help-content {display: none; float: left; margin: 15px 0 0 0; background: #E4EBF1; padding: 30px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; min-width: auto; width: 100%;}
+div.help div.help-content:after {display: none;}
+div.help div.help-content p:last-of-type {margin: 0;}
+div.help div.help-content p {margin: 0 0 15px 0;}
+div.help div.help-content p:last-of-type {margin: 0;}
+div.help div.help-content:before {content: ''; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #E4EBF1 transparent; position: absolute; top: -10px; left: 20px;}
+
+
+ul.messages {position: fixed; top: 2%; right: 2%; width: 500px; max-width: 100%; z-index: 800; display: none;}
+ul.messages li {display: block; padding: 20px 40px 20px 60px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #E4EBF1; -webkit-box-shadow: 0px 0px 30px 0px rgba(4,16,37,0.10); box-shadow: 0px 0px 30px 0px rgba(4,16,37,0.10); margin: 0 0 15px 0; overflow: hidden;}
+ul.messages li:last-of-type {margin: 0;}
+ul.messages li:before {position: absolute; top: 0; left: 0; width: 40px; height: 100%; line-height: 60px!important; background: #D6E0EA; content: '\f05a'; font: var(--fa-font-solid); text-align: center; color: #081F49;}
+ul.messages li.info {background: #185DDC;}
+ul.messages li.info:before {background: #4781EB;}
+ul.messages li.success {background: #09BC8A;}
+ul.messages li.success:before {content: '\f058'; background: #08AF80;}
+ul.messages li.warning {background: #FFC914;}
+ul.messages li.warning:before {content: '\e417'; background: #FFD95C;}
+ul.messages li.error {background: #DD1C1A;}
+ul.messages li.error:before {content: '\f057'; background: #EA4B48;}
+ul.messages li.info, ul.messages li.success, ul.messages li.error, ul.messages li.info:before, ul.messages li.success:before, ul.messages li.error:before, ul.messages li.info:after, ul.messages li.success:after, ul.messages li.error:after {color: #FFFFFF;}
+ul.messages li p:last-of-type {margin: 0;}
+ul.messages.inline {position: relative; top: auto; right: auto; padding: 0 0 30px 0; margin: 0 auto; display: block; clear: both;}
+ul.messages.full-width {width: 100%;}
+
+
+form {display: block; float: left; width: 100%; padding: 60px 0 1200px 0;}
+form div.content {padding: 30px; display: block; clear: both;}
+form input, form select, form textarea {width: 100%; float: left; outline: none;  -webkit-appearance: none; appearance: none; padding: 0 20px; height: 60px; font-size: 16px; color: #081F49; font-family: 'Open Sans', sans-serif; font-weight: 400; background: #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 2px solid #E4EBF1;}
+form input:focus, form select:focus, form textarea:focus, form .custom-checkbox + label:active {z-index: 5; border: 2px solid #185DDC;}
+form .yellow-flash {animation: animation-yellow-flash 1s linear 2 normal;}
+form textarea {min-height: 200px; height: 200px; min-width: 100%; max-width: 100%; width: 100%; padding: 20px; resize: none;}
+form select {background: none; padding: 0 40px 0 20px; background: #FFFFFF url(/assets/img/svg/select.svg) no-repeat right 20px center; -webkit-background-size: 15px; -moz-background-size: 15px; -o-background-size: 15px; background-size: 15px;}
+form select::-ms-expand {display: none;}
+form input[type=number]::-webkit-inner-spin-button, 
+form input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; appearance: none; margin: 0;}
+form .submit {float: right;}
+form .submit.full {width: 100%; margin: 0;}
+form label {font-family: 'Open Sans', sans-serif; font-weight: 600; color: #081F49; margin: 0 0 10px 0; display: block; clear: both; letter-spacing: -0.015em;}
+form label.h6 {margin: 0 0 10px 0;}
+form label.text-size-smaller, form label.text-size-smallest {margin: 0 0 5px 0;}
+form div.field {display: block; clear: both; margin: 0 0 15px 0; width: 100%; float: left; padding: 0;}
+form div.field.two div.field {width: calc(50% - 20px); clear: none; margin: 0 20px 0 0; padding: 0; border: 0;}
+form div.field.two div.field:nth-of-type(2n) {margin: 0;}
+form div.field.three div.field {width: calc(30% - 10px); margin: 0 10px 0 0; clear: none; padding: 0;}
+form div.field.three div.field:last-of-type {width: 40%; margin: 0;}
+form div.field-icon {display: block; clear: both; float: left; width: 100%;}
+form div.field-icon:before {position: absolute; top: 0; left: 0; color: #D6E0EA; padding: 0 10px 0 20px; height: 60px; content: '\f154'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; text-align: center; line-height: 60px; font-size: 16px; z-index: 6; -webkit-border-top-left-radius: 10px; -webkit-border-bottom-left-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-bottomleft: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+form div.field-icon.name:before, form div.field-icon.username:before {content: '\f007';}
+form div.field-icon.password:before {content: '\f023';}
+form div.field-icon.telephone_number:before {content: '\f879';}
+form div.field-icon.email_address:before {content: '\f0e0';}
+form div.field-icon.date:before {content: '\f073';}
+form div.field-icon.address:before {content: '\f3c5';}
+form div.field-icon.tenants_number:before {content: '\f0c0';}
+form div.field-icon.percentage:before {content: '\25';}
+form div.field-icon.house:before {content: '\f015';}
+form div.field-icon.lender:before {content: '\f19c';}
+form div.field-icon.id:before {content: '\e415';}
+form div.field-icon input {padding: 0 20px 0 50px;}
+form div.address_form {width: 100%; clear: both; display: none; float: left; padding: 30px 0 0 0; border-top: 2px solid #E4EBF1; margin: 30px 0 0 0;}
+form .find_address {width: auto; float: right; -webkit-appearance: none; appearance: none; margin: 0; z-index: 250; position: relative; cursor: pointer; display: table; text-align: center; float: left!important; margin: 0;}
+form .unhide_address {-webkit-appearance: none; appearance: none; margin: 0; z-index: 250; position: relative; cursor: pointer; display: table; text-align: center; margin: 0; float: left!important;}
+form .address_lookup {float: left; width: 100%; display: block; clear: both;}
+form .idpc-input {width: 100%; text-transform: uppercase; display: block; clear: both; margin: 0 0 15px 0;}
+form .idpc-select {margin: 0 0 15px 0; animation: animation-blue-flash 1s linear 2 normal; clear: both;}
+form .blue-flash {animation: animation-blue-flash 1s linear 2 normal;}
+form span.error, form .idpc-error, form label.error, form .email_validation_error {color: #FFFFFF; display: none; width: auto; clear: both; float: left; position: relative; font-weight: 400; background: #DD1C1A; color: #FFFFFF!important; padding: 10px 20px; margin: 10px 0 0 0; z-index: 50; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; font-size: 14px; line-height: 160%;}
+form span.error:before, form .idpc-error:before, form label.error:before, form .email_validation_error:before {content: ''; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #DD1C1A transparent; position: absolute; top: -7px; left: 20px;}
+form .idpc-error {display: table; clear: both; margin: 0 0 10px 0;}
+form span.error:after, form .idpc-error:after, form label.error:after, form .email_validation_error:after {display: block; clear: both; width: 100%; content: '';}
+form .email_validation_error {display: none;}
+form .suggested_fix_conditional {display: none;}
+form .suggested_fix_apply:before {display: block; clear: both; width: 100%; content: '';}
+form .suggested_fix_apply {margin: 10px 0; clear: both;}
+form .suggested_fix_apply:after {background: none!important;}
+form input::placeholder {color: #D6E0EA; text-transform: none;}
+form ::placeholder {color: #D6E0EA; text-transform: none;}
+form :-ms-input-placeholder {color: #D6E0EA; text-transform: none;}
+form ::-ms-input-placeholder {color: #D6E0EA; text-transform: none;}
+form ul.options {display: block; clear: both; padding: 0; float: left; width: 100%;}
+form ul.options li {width: auto; margin: 0 10px 10px 0; float: left;}
+form ul.options li:last-of-type {margin: 0;}
+form ul.options.two li {width: calc(50% - 10px);}
+form ul.options.two li:last-of-type, form ul.options.two li:nth-last-child(2) {margin: 0 10px 0 0;}
+form ul.options.full li {width: 100%; clear: both; margin: 0 0 10px 0;}
+form ul.options.full li:last-of-type {margin: 0;}
+form ul.options.icons {display: flex;}
+form ul.options.icons li {float: left; clear: none; width: 50%; margin: 0; padding: 0 10px 20px 10px;}
+
+
+form .custom-checkbox.border-green + label {border: 2px solid #09BC8A; color: #081F49;}
+form .custom-checkbox.border-green + label .icon i {color: #09BC8A;}
+form .custom-checkbox.border-green + label:before {border: 2px solid #09BC8A;}
+form .custom-checkbox.background-green + label {background: #09BC8A; border: 2px solid #09BC8A; color: #FFFFFF;}
+form .custom-checkbox.square + label {text-align: center; padding: 40px; font-size: 18px; line-height: 160%; min-height: 100%;}
+form .custom-checkbox.square + label:before {display: none;}
+form .custom-checkbox.square + label .icon {display: block; clear: both; margin: 0 0 30px 0;}
+form .custom-checkbox.square + label .icon i {font-size: 40px;}
+
+
+form .custom-checkbox {display: none;}
+form .custom-checkbox + label {position: relative; cursor: pointer; outline: none; margin: 0; width: auto; color: #081F49; background: #FFFFFF; border: 2px solid #E4EBF1; font-family: 'Open Sans', sans-serif; font-weight: 400; padding: 16px 30px 16px 60px; text-align: left; display: block; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+form .custom-checkbox:disabled + label {cursor: default;}
+form .custom-checkbox + label .text-size-smaller {display: block; clear: both; padding: 0; font-family: 'Open Sans', sans-serif; font-weight: 400;}
+form .custom-checkbox + label:before {width: 30px; height: 30px; line-height: 30px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; position: absolute; top: 12px; left: 15px; content: ''; border: 2px solid #E4EBF1; background: #FFFFFF;}
+form .custom-checkbox:checked + label {border: 2px solid #09BC8A; color: #09BC8A;}
+form .custom-checkbox:checked + label:before {-webkit-box-shadow: inset 0px 0px 0px 7px #FFFFFF; box-shadow: inset 0px 0px 0px 7px #FFFFFF; border: 2px solid #09BC8A; background: #09BC8A;}
+form .custom-checkbox.size-smaller + label {padding: 10px 20px 10px 42px;}
+form .custom-checkbox.size-smaller + label:before {width: 20px; height: 20px; line-height: 20px; top: 11px; left: 10px;}
+form .custom-checkbox.size-smaller:checked + label:before {-webkit-box-shadow: inset 0px 0px 0px 5px #FFFFFF; box-shadow: inset 0px 0px 0px 5px #FFFFFF; border: 2px solid #09BC8A; background: #09BC8A;}
+form div.navigation {padding: 15px 0 0 0; display: block; clear: both;}
+form div.question, form div.answer {margin: 0 0 15px 0; padding: 0 0 0 55px; width: 100%; display: table; clear: both; display: none; float: left;}
+form div.question div.meta, form div.answer div.meta {display: block; clear: both; width: 100%;}
+form div.question div.avatar, form div.answer div.avatar {width: 40px; height: 40px; position: absolute; bottom: 0; left: -55px; border: 3.35px solid #09BC8A; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: #FFFFFF; font-size: 14px; line-height: 40px;}
+form div.question div.avatar .initials, form div.answer div.avatar .initials {position: absolute; top: 50%; left: 50%; text-align: center; transform: translate(-50%,-50%); font-family: 'Lexend Deca', sans-serif; font-weight: 700; text-transform: uppercase;}
+form div.question div.avatar svg {width: 60%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-40%); fill: #09BC8A;}
+form div.question div.content, form div.answer div.content, form div.answer div.content .print {background: #F3F6F9; padding: 15px 30px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; float: left; clear: both; word-break: break-word;}
+form div.question div.content div.confetti-pop {display: block; clear: both; position: absolute; bottom: 0; left: 0; width: 100%; z-index: 1;}
+form div.question div.content div.confetti-pop #end_of_stage_confetti {width: 100%; height: 150px; z-index: 2;}
+form div.question div.content div.confetti-pop:before {display: none;}
+form div.question div.content.margin-bottom {margin: 0 0 15px 0;}
+form div.answer div.content .print {padding: 12.61px 20px;}
+form div.answer div.content .cancel {margin: 10px 0; display: block; clear: both; float: left;}
+form div.answer {max-width: 70%; float: right; padding: 0 55px 0 0; margin: 0;}
+form div.answer div.avatar {left: auto; right: -55px; color: #FFFFFF; border: 0; background: #185DDC; display: none;}
+form div.answer div.timestamp {text-align: right;}
+form div.answer div.content {width: 100%; padding: 30px; margin: 0 55px 0 0;}
+form div.answer.complete div.content {background: #ECFEF9;}
+form div.answer.complete div.content.background-dark-grey {background: #D8FDF3!important;}
+form div.answer.complete div.content div.help-content:before {border-color: transparent transparent #D8FDF3 transparent;}
+form div.answer.complete div.content .error, form div.answer.complete div.content .idpc-error {display: none;}
+form div.answer.complete div.content:after {content: '\f058'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; position: absolute; bottom: -3px; font-size: 12px; right: -3px; border: 0; text-align: center; color: #09BC8A; text-align: center; line-height: 100%; border: 3px solid #FFFFFF; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; margin: 0;}
+form div.answer.complete div.content#address_complete {-webkit-box-shadow: none; box-shadow: none;}
+form div.answer.complete div.content#address_complete:after {display: none;}
+form div.answer.complete div.help-content {background: #D8FDF3;}
+form div.answer div.content .print {width: auto; max-width: 100%; background: #FFFFFF!important; border: 2px solid #09BC8A;}
+form div.answer.complete div.content .custom-checkbox + label {opacity: 0.60;}
+form div.answer.complete div.content .custom-checkbox:checked + label {opacity: 1;}
+form div.answer.complete div.content input, form div.answer.complete div.content select {border: 2px solid #09BC8A;}
+form div.answer.complete .complete_hide, form div.answer.complete .field-icon, form div.answer.complete .navigation .button.update, form div.answer.complete .navigation .button.next, form div.answer .navigation .edit, form div.answer .navigation .update, form div.answer .print {display: none;}
+form div.answer.complete .print, form div.answer.complete .navigation .button.edit {display: block;}
+form div.answer.error div.content .error, form div.answer.error div.content .idpc-error {display: block;}
+form div.answer.error div.content .error.secondary {display: none;}
+form div.answer.error div.content .error.tertiary {display: none;}
+form div.answer.error div.content .error.general {display: none;}
+form div.answer.error.secondary div.content .error.secondary {display: block;}
+form div.answer.error.secondary div.content .error, form div.answer.error.secondary div.content .error.tertiary {display: none;}
+form div.answer.error.tertiary div.content .error.tertiary {display: block;}
+form div.answer.error.tertiary div.content .error, form div.answer.error.tertiary div.content .error.secondary {display: none;}
+form div.answer.error div.content div.field .error {display: none;}
+form div.answer.error div.content div.field.error .error, form div.answer.error div.content div.field.error .idpc-error {display: block;}
+form div.answer.error div.content div.field.error .error.secondary, form div.answer.error div.content div.field.error .error.tertiary  {display: none;}
+form div.answer.error div.content div.field.three div.field.error {display: block;}
+form div.answer.error div.content div.field.error.secondary {display: block;}
+form div.answer.error div.content div.field.error.secondary .error {display: none;}
+form div.answer.error div.content div.field.error.secondary .error.secondary {display: block;}
+form div.answer.error div.content div.field.error.tertiary {display: block;}
+form div.answer.error div.content div.field.error.tertiary .error {display: none;}
+form div.answer.error div.content div.field.error.tertiary .error.tertiary {display: block;}
+form div.answer.error div.content div.field.error input, form div.answer.error div.content div.field.error div.field-icon input, form div.answer.error div.content div.field-icon input, form div.answer.error div.content div.field.error select, form div.answer.error div.content textarea, form div.field-error input, form div.field-error select {border: 2px solid #DD1C1A;}
+form div.answer.error div.content div.field input, form div.answer.error div.content div.field div.field-icon input {border: 2px solid #E4EBF1;}
+form div.answer.error div.content div.field input:focus, form div.answer.error div.content div.field div.field-icon input:focus {border: 2px solid #185DDC;}
+form div.answer.error div.content div.field.error input:focus, form div.answer.error div.content div.field.error div.field-icon input:focus {border: 2px solid #DD1C1A;}
+form div.stage {display: block; clear: both;}
+form div.stage#stage_2 {display: none;}
+form div.step {display: none; clear: both; padding: 130px 0; float: left; width: 100%;}
+form div.step.start, form div.step.first_question {display: block; padding: 0 0 130px 0;}
+form div.step.start div.question:first-of-type div.avatar svg {-webkit-animation: animation-avatar 2s; -moz-animation: animation-avatar 2s; -o-animation: animation-avatar 2s; animation: animation-avatar 2s; animation-delay: 0.75s;}
+form div.additional-items {display: block; clear: both;}
+form .button {float: right;}
+
+
+section, div.section {padding: 80px 0;}
+section.padding-double, div.section.padding-double {padding: 160px 0;}
+section.padding-top-double, div.section.padding-top-double {padding: 160px 0 80px 0;}
+section.padding-bottom-double, div.section.padding-bottom-double {padding: 80px 0 160px 0;}
+section.padding-top-none-bottom-double, div.section.padding-top-none-bottom-double {padding: 0 0 160px 0;}
+section.padding-top-none, div.section.padding-top-none {padding: 0 0 80px 0;}
+section.padding-bottom-none, div.section.padding-bottom-none {padding: 80px 0 0 0;}
+section.padding-none, div.section.padding-none {padding: 0;}
+section.padding-half, div.section.padding-half {padding: 40px 0;}
+section.padding-top-half, div.section.padding-top-half {padding: 40px 0 80px 0;}
+
+
+/* Broker facing website V2 */
+section.feature {padding: 40px 0 80px 0; overflow: hidden;}
+section.feature div.portal-preview {margin: 60px auto; width: 100%; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+section.feature div.portal-preview img {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+section.feature div.portal-preview:after {position: absolute; bottom: 0; left: 0; width: 100%; height: 0; padding-bottom: 25%; background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); content: '';}
+section.feature div.portal-preview div.personalised-portal {width: 300px; height: 300px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 2; -webkit-box-shadow: 0px 0px 50px 0px rgba(4,16,37,0.10); box-shadow: 0px 0px 50px 0px rgba(4,16,37,0.10);}
+section.feature div.portal-preview div.personalised-portal span {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 0 15px; margin: 0;}
+section.feature div.portal-preview div.logo.mark {position: absolute; bottom: -30px; right: 315px; margin: 0;}
+section.feature div.portal-preview div.logo.mark:before {content: ''; width: 140px; height: 140px; background: #FFFFFF; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1;}
+section.feature div.portal-preview div.device-shape.phone {position: absolute; top: 50%; left: -125px; transform: translateY(-50%); z-index: 10;}
+
+
+.underscore svg {fill: #FFC914;}
+.underscore {width: 300px; display: block; clear: both; margin: -5px auto 0 auto; z-index: -1; overflow: hidden;}
+.underscore:before {content: ''; position: absolute; top: 0; left: 100%; width: 100%; height: 100%; background: #FFFFFF; -webkit-animation: animation-slide-out-right 0.25s linear normal; animation: animation-slide-out-right 0.25s linear normal;}
+
+
+div.customer-nodes {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+div.customer-nodes ul {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+div.customer-nodes ul li {padding: 10px; background: #FFFFFF; -webkit-box-shadow: 0px 0px 50px 0px rgba(4,16,37,0.10); box-shadow: 0px 0px 50px 0px rgba(4,16,37,0.10); position: absolute; top: 15%; left: -10%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; z-index: 20; width: 250px;}
+div.customer-nodes ul li img {-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.customer-nodes ul li.two {width: 350px; left: auto; right: -15%; top: auto; bottom: 5%;}
+div.customer-nodes ul li.three {width: 175px; top: 35%; left: -5%;}
+div.customer-nodes ul li.four {width: 100px; top: 10%; left: 20%; padding: 5px;}
+div.customer-nodes ul li.five {width: 130px; top: auto; bottom: 5%; left: auto; right: 15%; padding: 5px;}
+
+
+div.flex-container.feature-display div.column {flex-basis: 40%; padding: 30px;}
+div.flex-container.feature-display div.column:first-of-type {z-index: 10;}
+div.flex-container.feature-display div.column:last-of-type {flex-basis: 60%; z-index: 5; padding: 0;}
+div.flex-container.feature-display div.column div.icon {width: 80px; height: 80px; position: absolute; top: -40px; left: -40px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; z-index: 20; display: none;}
+div.flex-container.feature-display div.column div.icon i, div.flex-container.three.quote div.column div.icon i {font-size: 25px; line-height: 80px; text-align: center; display: block; margin: 0;}
+div.flex-container.feature-display div.column div.icon.number {width: 60px; height: 60px; display: block; text-align: center; font-size: 25px; line-height: 60px; font-weight: 600;}
+div.flex-container.feature-display div.column div.logo {width: 250px; display: block; clear: both; padding: 15px 40px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; margin: 10px 0 30px -15px; float: left;}
+div.flex-container.feature-display div.column div.logo.fca {width: 150px;}
+div.flex-container.feature-display.equal div.column {flex-basis: 50%;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 80px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; min-height: 100%;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 60px 60px 30px 60px;}
+
+
+div.flex-container.meet-the-team.padded-content div.column {align-self: stretch;}
+div.flex-container.meet-the-team.padded-content div.column div.content {padding: 40px; text-align: center;}
+div.flex-container.meet-the-team div.column div.avatar {width: 160px; margin: 0 auto 15px auto;}
+div.flex-container.meet-the-team.padded-content div.column div.content p {margin: 0;}
+
+
+div.flex-container.quote:before {content: '\f10d'; font: var(--fa-font-solid); text-rendering: auto; -webkit-font-smoothing: antialiased; position: absolute; top: 0; left: 15px; font-size: 80px; z-index: 45; color: #185DDC;}
+div.flex-container.quote.hide-icon:before {display: none;}
+div.flex-container.quote div.column p:last-of-type {margin: 0;}
+
+
+section.feature-marketplace div.flex-container div.column {padding: 0 30px 0 0;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 200px 0 100px 0;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 60px 60px 30px 60px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; margin: 0 0 60px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {position: absolute; background: #DD1C1A; width: 60px; height: 60px; top: -30px; left: -30px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; border: 5px solid #FFFFFF; line-height: 49px; text-align: center; color: #FFFFFF; font-size: 25px;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number i {margin: 0;}
+section.feature-marketplace div.flex-container div.column div.content div.logo {width: 130px; display: block; clear: both; padding: 10px 30px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; margin: 0 0 30px 0;}
+
+
+
+span.viewport {display: none;}
+span.viewport:after {content: 'Full Desktop'; color: #FFFFFF; position: fixed; bottom: 15px; right: 15px; background: red; z-index: 999; padding: 2px 15px; font-size: 8px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+
+
+@media (hover: hover) and (pointer: fine) {
+.link:hover {text-decoration: none;}
+form .custom-checkbox + label:hover {border: 2px solid #09BC8A;}
+form .custom-checkbox.square + label:hover, form .custom-checkbox.square:checked + label {background: #09BC8A; color: #FFFFFF!important;}
+form .custom-checkbox.square + label:hover .icon i, form .custom-checkbox.square:checked + label i {color: #FFFFFF!important;}
+div#mortgage-list-pagination ul li a:hover {background: #E4EBF1; border: 2px solid #E4EBF1;}
+div#mortgage-list-pagination ul li.disabled:hover {color: #D6E0EA!important;}
+form .custom-checkbox:disabled + label:hover {border: 2px solid #E4EBF1;}
+form .custom-checkbox:checked:disabled + label:hover {border: 2px solid #09BC8A;}
+.ui-state-hover {text-decoration: none; color: #185DDC; background-color: #185DDC; border: 1px solid #185DDC!important; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor: pointer;}
+table tr.odd:hover td, table tr.even:hover td {background: #F3F6F9!important;}
+form .custom-checkbox.background-green:hover + label {background: #185DDC; border: 2px solid #185DDC;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Desktop wider
+------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1800px) and (max-width: 2000px) {
+span.viewport:after {content: 'Wide Desktop'; background: orange;}
+
+
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message div.column {padding: 30px 20px 0 0;}
+
+
+div.hero.collective div.content {padding: 80px 100px 38% 100px;}
+div.hero div.content {padding: 80px 100px 50px 100px;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle {width: 27%; padding-bottom: 27%; top: 5%; left: -9%;}
+div.hero div.circle.smaller {width: 22%; padding-bottom: 22%; left: -10%;}
+div.hero div.circle.two {bottom: -5%; right: -10%;}
+
+
+div.play {width: 70px; height: 70px;}
+div.play i {font-size: 30px;}
+
+
+form div.answer {max-width: 75%;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Desktop wide
+------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+span.viewport:after {content: 'Wide Desktop'; background: green;}
+
+
+h1, .h1 {font-size: 70px;}
+h2, .h2 {font-size: 55px;}
+
+
+.height-full {min-height: auto;}
+.blurred:after {width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: block; background: #F3F6F9; opacity: 0.90; content: ''; z-index: 150;}
+.text-size-largest {font-size: 90px;}
+
+
+div.flex-container.twenty-fifty-thirty div.column {flex-basis: 35%; padding: 90px 5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {flex-basis: 78%; padding: 0 5% 0 6%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 22%; padding: 0 2.5% 30px 2.5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {position: fixed; width: 100%; height: 70px; bottom: -70px; left: 0; border-left: 0; padding: 0; transition: 0.30s ease-in-out all; background: #FFFFFF; border: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary div.confetti-pop {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show {bottom: 0; height: 75%; padding: 0; overflow-y: scroll;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {display: block; top: 0; left: 0; border-bottom: 2px solid #F3F6F9; z-index: 250;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.traveller {height: 100%; top: auto; bottom: 0; background: #FFFFFF; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {display: block; position: relative; margin: 0; background: #185DDC;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {padding: 60px 5% 70px 5%; margin: 0; background: #FFFFFF; min-height: 100%; max-height: none; overflow: hidden;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {display: block; align-self: flex-start; padding: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {display: none!important;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: block;}
+
+
+div.modal div.flex-container div.column {padding: 40px 70px 70px 70px;}
+
+
+div.mortgage_results_loading {background: #FFFFFF;}
+
+
+div.information-summary ul li .left, div.information-summary ul li .right {width: 40%;}
+div.information-summary ul li .right {width: 60%;}
+
+
+div.mortgage-list div.mortgage div.flex-container.header div.column {background: #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 16.666666%;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {border: 0;}
+
+
+form div.answer {max-width: 65%;}
+
+
+/* --------- Site --------- */
+header {padding: 0;}
+
+
+div.hero.collective div.content {padding: 80px 70px 38% 70px;}
+div.hero div.content {padding: 80px 70px 50px 70px;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle, div.hero div.circle.smaller {width: 25%; padding-bottom: 25%; left: -4%; top: -8%;  z-index: 50;}
+div.hero div.circle.two {bottom: -8%; right: -4%;}
+
+
+div.play {width: 70px; height: 70px;}
+div.play i {font-size: 30px;}
+div.play-instruction.free {top: -130px; left: 30px;}
+div.play-instruction svg {width: 50px;}
+
+
+div.lender-logos div.lender-logo {margin: 0 60px 0 0;}
+
+
+/* Broker facing website V2 */
+section.feature-marketplace div.flex-container div.column {flex-basis: 65%;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 60px 0 0 0; flex-basis: 35%;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 60px 50px 30px 50px; margin: 0 0 40px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {width: 50px; height: 50px; top: -25px; left: -25px; line-height: 39px; font-size: 20px;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 60px;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 40px 40px 30px 40px;}
+
+
+div.customer-nodes ul li {top: -20px; left: 15%; width: 150px;}
+div.customer-nodes ul li.two {width: 250px; right: 5%; bottom: -50px;}
+div.customer-nodes ul li.three {width: 150px; left: 2.5%;}
+
+
+section.feature div.portal-preview div.personalised-portal {width: 275px; height: 275px;}
+section.feature div.portal-preview div.device-shape.phone {left: 0;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Tablet landscape: 960px.
+------------------------------------------------------------------------------- */
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+span.viewport:after {content: 'Tablet Landscape 960px - 1200px'; background: skyblue;}
+
+
+h1, .h1 {font-size: 60px;}
+h2, .h2 {font-size: 45px;}
+
+
+.height-full {min-height: auto;}
+
+
+div.flex-container.twenty-fifty-thirty div.column {flex-basis: 100%; padding: 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column div.traveller {position: relative; top: 0; left: 0; padding: 0; display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {flex-basis: 100%; padding: 80px 5% 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer {padding: 0 0 30px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 100%; height: 90px; padding: 0 5%; align-self: flex-start; width: 100%; position: fixed; top: 0; left: 0; padding: 0; background: #FFFFFF; border: 0;border-bottom: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps div.logo {position: absolute; top: 50%; left: 0; margin: 0 0 0 2.5%; transform: translateY(-50%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps.blurred {filter: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps .traveller {height: 100%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {position: fixed; width: 100%; height: 70px; bottom: -70px; left: 0; border-left: 0; padding: 0; transition: 0.30s ease-in-out all; background: #FFFFFF; border: 0; border-top: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results * {z-index: 1;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary div.confetti-pop {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show {bottom: 0; height: calc(100% - 88px); padding: 0; overflow: hidden;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {display: block; top: 0; left: 0; z-index: 50; z-index: 250;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.traveller {min-height: 100%; top: auto; bottom: 0; background: #FFFFFF; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {display: block; position: relative; margin: 0; background: #185DDC;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {padding: 60px 5% 70px 5%; margin: 0; background: #FFFFFF; min-height: 100%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {display: block; align-self: flex-start;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {display: none!important;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: block;}
+
+
+div.modal div.flex-container div.column {padding: 40px 70px 70px 70px;}
+div.modal div.flex-container div.column div.flex-container div.column.seventy, div.modal div.flex-container div.column div.flex-container div.column.forty, div.modal div.flex-container div.column div.flex-container div.column.thirty {flex-basis: 100%;}
+div.modal.video_display div.flex-container.center-vertically {align-items: center;}
+div.modal.video_display div.flex-container.center-vertically div.column {align-self: center;}
+
+
+div.mortgage_results_loading {background: #FFFFFF;}
+
+
+div.information-summary ul li .left, div.information-summary ul li .right {width: 100%; clear: both; display: block;}
+
+
+div.mortgage-list div.mortgage div.flex-container.header div.column {background: #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .h6 {padding: 0 130px 0 110px}
+div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 16.666666%;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {border: 0; left: 15px;}
+
+
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 33.333333%; padding: 10px 20px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0!important;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+
+
+div.progress {padding: 0; float: left; width: 100%; height: 90px}
+div.progress ul {padding: 0; width: 70%; position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+div.progress ul li {clear: none; float: left; width: 16.666666%; text-align: center; padding: 26px 0 0 0; margin: 0;}
+div.progress ul li:before {left: 50%; transform: translateX(-50%); width: 30px; height: 30px; border: 2px solid #F3F6F9;}
+div.progress ul li span {display: none;}
+
+
+form div.answer {max-width: 70%;}
+form div.answer div.content .print {padding: 14px 20px;}
+
+
+/* --------- Site --------- */
+
+
+div.steps {padding: 50px 0 0 0;}
+div.steps div.step {padding: 50px;}
+
+
+div.hero div.content {padding: 40px 70px 100px 70px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle, div.hero div.circle.smaller {width: 25%; padding-bottom: 25%; top: auto; bottom: -10%; left: 5%;}
+div.hero div.circle.two {bottom: -10%; right: 5%;}
+div.hero div.circle div.image {border: 10px solid #FFFFFF;}
+div.hero div.checkbox-list {padding: 15px 0 0 0; text-align: center;}
+div.hero div.checkbox-list ul {display: inline-block;}
+div.hero div.checkbox-list ul li {margin: 0 0 10px 0; font-size: 16px;}
+div.hero.collective div.content {padding: 100px 70px 41% 70px;}
+div.hero.collective div.content div.image {width: 65%; bottom: -8%;}
+
+
+div.play {width: 60px; height: 60px; border: 4px solid #09BC8A; -webkit-box-shadow: 0px 0px 0px 6px #FFFFFF;  box-shadow: 0px 0px 0px 6px #FFFFFF;}
+div.play i {font-size: 25px;}
+div.play-instruction.free {top: -130px; left: 30px;}
+div.play-instruction svg {width: 50px;}
+
+
+div.lender-logos div.lender-logo {margin: 0 40px 0 0; padding: 10px 0;}
+div.lender-logos div.lender-logo img {width: 85%;}
+
+
+div.device-shape {outline: 8px solid #081F49;}
+div.device-shape.phone {width: 190px; height: 380px;}
+div.device-shape div.screen.img-1 {background: url(/assets/img/photos/12.png) no-repeat center center; background-size: 180px auto;}
+div.device-shape div.screen.img-2 {background: url(/assets/img/photos/13.png) no-repeat center center; background-size: 180px auto;}
+div.device-shape div.screen.img-3 {background: url(/assets/img/photos/14.png) no-repeat center center; background-size: 180px auto;}
+div.device-shape div.screen.img-4 {background: url(/assets/img/photos/15.png) no-repeat center center; background-size: 220px auto;}
+
+
+div.flex-container div.column {padding: 30px;}
+div.flex-container.padding-top-bottom-none div.column {padding: 0 30px;}
+div.flex-container.two div.column div.login-form br.full-width-wide-mobile {display: none;}
+div.flex-container div.column .logo-mark {width: 50px; top: 5%; right: 3%; border: 6px solid #FFFFFF;}
+div.flex-container.two.text-image div.column:first-of-type {flex-basis: 60%;}
+div.flex-container.two.text-image div.column:last-of-type {flex-basis: 40%;}
+div.flex-container.center-vertically {align-items: flex-start;}
+div.flex-container.center-vertically div.column, div.flex-container.center-vertically div.column div.content {align-self: flex-start;}
+div.flex-container.logos {padding: 30px 0 0 0;}
+div.flex-container.logos div.column {padding: 0 30px;}
+div.flex-container div.circle {border: 10px solid #FFFFFF;}
+div.flex-container.reverse-order .logo-mark {right: auto; left: 3%;}
+div.flex-container.padding-none-selective div.column {padding: 30px 15px;}
+div.flex-container.four div.column {flex-basis: calc(100% / 2);}
+
+
+ul.messages {top: 0; right: 0; padding: 20px;}
+
+
+section, div.section {padding: 60px 0;}
+section.padding-double, div.section.padding-double {padding: 120px 0;}
+section.padding-top-double, div.section.padding-top-double {padding: 120px 0 60px 0;}
+section.padding-bottom-double, div.section.padding-bottom-double {padding: 60px 0 120px 0;}
+section.padding-top-none-bottom-double, div.section.padding-top-none-bottom-double {padding: 0 0 120px 0;}
+section.padding-top-none, div.section.padding-top-none {padding: 0 0 60px 0;}
+section.padding-bottom-none, div.section.padding-bottom-none {padding: 60px 0 0 0;}
+section.padding-none, div.section.padding-none {padding: 0;}
+section.padding-half, div.section.padding-half {padding: 30px 0;}
+section.padding-top-half, div.section.padding-top-half {padding: 30px 0 60px 0;}
+
+
+/* Broker facing website V2 */
+div.flex-container.feature-display div.column {flex-basis: 50%; align-self: center;}
+div.flex-container.feature-display div.column:last-of-type {flex-basis: 50%;}
+div.flex-container.feature-display.equal div.column {flex-basis: 50%;}
+
+
+section.feature-marketplace div.flex-container {align-items: center; justify-content: center;}
+section.feature-marketplace div.flex-container div.column {flex-basis: 100%; position: relative; padding: 0;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 30px 0 0 0; flex-basis: 60%;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 60px 50px 30px 50px; margin: 0 0 40px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {width: 50px; height: 50px; top: -25px; left: -25px; line-height: 39px; font-size: 20px;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 60px;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 40px 40px 30px 40px;}
+
+
+div.flex-container.meet-the-team div.column {flex-basis: calc(100% / 2);}
+
+
+div.customer-nodes ul li {top: -20px; left: 10%; width: 150px;}
+div.customer-nodes ul li.two {width: 150px; right: 5%; bottom: -20px;}
+div.customer-nodes ul li.three {width: 150px; left: 2.5%;}
+div.customer-nodes ul li.four {left: 10%;}
+div.customer-nodes ul li.five {right: 5%;}
+
+
+section.feature div.portal-preview div.personalised-portal {width: 275px; height: 275px;}
+section.feature div.portal-preview div.device-shape.phone {left: 0;}
+section.feature div.portal-preview div.logo.mark {position: absolute; bottom: -30px; right: auto; left: 50%; transform: translateX(-50%);}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Tablet portrait: 640px.
+------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+span.viewport:after {content: 'Tablet Portrait'; background: blue;}
+
+
+h1, .h1 {font-size: 60px; letter-spacing: -0.040em;}
+h2, .h2 {font-size: 40px; letter-spacing: -0.040em;}
+h3, .h3 {font-size: 30px; letter-spacing: -0.030em;}
+h4, .h4 {font-size: 25px;}
+h5, .h5 {font-size: 20px;}
+h6, .h6, div.checkbox-list ul li {font-size: 16px;}
+
+
+.height-full {min-height: auto;}
+.underscore {width: 230px; margin: -4px auto 0 auto;}
+
+
+div.flex-container.twenty-fifty-thirty div.column {flex-basis: 100%; padding: 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column div.traveller {position: relative; top: 0; padding: 0; left: 0; display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {flex-basis: 100%; padding: 80px 5% 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer {padding: 0 0 30px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 100%; height: 90px; padding: 0 5%; align-self: flex-start; width: 100%; position: fixed; top: 0; left: 0; padding: 0; background: #FFFFFF; border: 0;border-bottom: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps div.logo {position: absolute; top: 50%; left: 0; margin: 0 0 0 2.5%; transform: translateY(-50%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps.blurred {filter: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps .traveller {height: 100%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {position: fixed; width: 100%; height: 70px; bottom: -70px; left: 0; border-left: 0; padding: 0; transition: 0.30s ease-in-out all; background: #FFFFFF; border: 0; border-top: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary div.confetti-pop {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show {bottom: 0; height: calc(100% - 88px); padding: 0; overflow-y: scroll;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {display: block; top: 0; left: 0; z-index: 50; z-index: 250;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.traveller {min-height: 100%; top: auto; bottom: 0; background: #FFFFFF; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {display: block; position: relative; margin: 0; background: #185DDC;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {padding: 60px 5% 70px 5%; margin: 0; background: #FFFFFF; min-height: 100%; max-height: none; overflow: hidden;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {display: block; align-self: flex-start;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {display: none!important;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: block;}
+
+
+div.information-summary ul li .left, div.information-summary ul li .right {width: 40%;}
+div.information-summary ul li .right {width: 60%;}
+
+
+div.mortgage-list div.mortgage div.flex-container.header div.column {background: #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .h6 {padding: 0 130px 0 110px}
+div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 33.333333%;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {border: 0; left: 15px;}
+
+
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 33.333333%; padding: 10px 20px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0!important;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+
+
+div.mortgage_results_loading {background: #FFFFFF;}
+
+
+div.progress {padding: 0; float: left; width: 100%; height: 90px}
+div.progress ul {padding: 0; width: 75%; position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+div.progress ul li {clear: none; float: left; width: 16.666666%; text-align: center; padding: 26px 0 0 0; margin: 0;}
+div.progress ul li:before {left: 50%; transform: translateX(-50%); width: 30px; height: 30px; border: 2px solid #F3F6F9;}
+div.progress ul li span {display: none;}
+
+
+div.modal div.flex-container {padding: 40px 0;}
+div.modal div.flex-container div.column {padding: 30px 40px 40px 40px;}
+div.modal div.flex-container div.column div.flex-container div.column.seventy, div.modal div.flex-container div.column div.flex-container div.column.fifty, div.modal div.flex-container div.column div.flex-container div.column.thirty {flex-basis: 100%;}
+div.modal.video_display div.flex-container.center-vertically {align-items: center;}
+div.modal.video_display div.flex-container.center-vertically div.column {align-self: center;}
+
+
+form div.answer {max-width: 100%; padding: 0 55px;}
+form div.answer div.content .print {padding: 14px 20px;}
+
+
+/* --------- Site --------- */
+header {padding: 0; height: 100px;}
+
+
+div.logo.mark {width: 130px;}
+
+
+div.steps {padding: 40px 0 0 0;}
+div.steps div.step {padding: 40px;}
+
+
+div.hero div.content {padding: 80px 40px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle, div.hero div.circle.smaller {width: 20%; padding-bottom: 20%; top: auto; bottom: -10%; left: 5%;}
+div.hero div.circle.two {bottom: -10%; right: 5%;}
+div.hero div.circle div.image {border: 6px solid #FFFFFF;}
+div.hero div.checkbox-list {padding: 15px 0 0 0; text-align: center;}
+div.hero div.checkbox-list ul {display: inline-block;}
+div.hero div.checkbox-list ul li {margin: 0 0 10px 0; padding: 0 0 0 30px;}
+div.hero.collective div.content {padding: 80px 40px 42% 40px;}
+div.hero.collective div.content div.image {width: 65%; bottom: -8%;}
+div.hero.introduction div.content {padding: 40px 40px 60px 40px;}
+
+
+div.play {width: 50px; height: 50px; border: 4px solid #09BC8A; -webkit-box-shadow: 0px 0px 0px 6px #FFFFFF;  box-shadow: 0px 0px 0px 6px #FFFFFF;}
+div.play i {font-size: 20px;}
+div.play-instruction.free {top: -130px; left: 30px;}
+div.play-instruction svg {width: 50px;}
+
+
+div.lender-logos div.lender-logo {margin: 0 30px 0 0; padding: 10px 0;}
+div.lender-logos div.lender-logo img {width: 85%;}
+
+
+div.device-shape {outline: 6px solid #081F49;}
+div.device-shape.phone {width: 150px; height: 300px;}
+div.device-shape div.screen.img-1 {background: url(/assets/img/photos/12.png) no-repeat center center; background-size: 140px auto;}
+div.device-shape div.screen.img-2 {background: url(/assets/img/photos/13.png) no-repeat center center; background-size: 140px auto;}
+div.device-shape div.screen.img-3 {background: url(/assets/img/photos/14.png) no-repeat center center; background-size: 140px auto;}
+div.device-shape div.screen.img-4 {background: url(/assets/img/photos/15.png) no-repeat center center; background-size: 170px auto;}
+
+
+div.login-form {width: 100%; padding: 30px 20px;}
+
+
+div.flex-container div.column {padding: 30px 15px;}
+div.flex-container.half-circle {padding: 0 0 80px 0;}
+div.flex-container.padding-top-bottom-none div.column {padding: 0 15px;}
+div.flex-container.two div.column div.login-form br.full-width-wide-mobile {display: none;}
+div.flex-container div.column .logo-mark {width: 50px; top: 5%; right: 3%; border: 6px solid #FFFFFF;}
+div.flex-container.two.text-image div.column:first-of-type {flex-basis: 60%; padding: 40px 15px}
+div.flex-container.two.text-image div.column:last-of-type {flex-basis: 40%; align-self: stretch;}
+div.flex-container.center-vertically {align-items: flex-start;}
+div.flex-container.center-vertically div.column, div.flex-container.center-vertically div.column div.content {align-self: flex-start;}
+div.flex-container.logos {padding: 15px 0 0 0;}
+div.flex-container.logos div.column {padding: 0 25px;}
+div.flex-container.logos div.column svg {width: 100%;}
+div.flex-container div.circle {border: 6px solid #FFFFFF;}
+div.flex-container.reverse-order .logo-mark {right: auto; left: 3%;}
+div.flex-container.padding-none-selective div.column {flex-basis: 100%; padding: 0 30px;}
+div.flex-container.padding-none-selective div.column:last-of-type div.checkbox-list {padding: 15px 0;}
+div.flex-container.four div.column {flex-basis: calc(100% / 2);}
+
+
+ul.messages {top: 0; right: 0; padding: 20px;}
+
+
+section, div.section {padding: 60px 0;}
+section.padding-double, div.section.padding-double {padding: 120px 0;}
+section.padding-top-double, div.section.padding-top-double {padding: 120px 0 60px 0;}
+section.padding-bottom-double, div.section.padding-bottom-double {padding: 60px 0 120px 0;}
+section.padding-top-none-bottom-double, div.section.padding-top-none-bottom-double {padding: 0 0 120px 0;}
+section.padding-top-none, div.section.padding-top-none {padding: 0 0 60px 0;}
+section.padding-bottom-none, div.section.padding-bottom-none {padding: 60px 0 0 0;}
+section.padding-none, div.section.padding-none {padding: 0;}
+section.padding-half, div.section.padding-half {padding: 30px 0;}
+section.padding-top-half, div.section.padding-top-half {padding: 30px 0 60px 0;}
+
+
+/* Broker facing website V2 */
+div.flex-container.feature-display {align-items: center; justify-content: center;}
+div.flex-container.feature-display div.column {flex-basis: 100%; text-align: center;}
+div.flex-container.feature-display div.column:last-of-type {flex-basis: 90%;}
+div.flex-container.feature-display.reverse-order div.column {order: 1;}
+div.flex-container.feature-display.reverse-order div.column:last-of-type {order: 2;}
+div.flex-container.feature-display div.column div.logo {margin: 0 auto 30px auto; float: none;}
+div.flex-container.feature-display.equal div.column {flex-basis: 90%;}
+div.flex-container.feature-display.equal div.column:first-of-type {padding: 0 30px 30px 30px;}
+
+
+section.feature-marketplace div.flex-container {align-items: center; justify-content: center;}
+section.feature-marketplace div.flex-container div.column {flex-basis: 100%; position: relative; padding: 0;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 30px 0 0 0; flex-basis: 70%;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 60px 50px 30px 50px; margin: 0 0 40px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {width: 50px; height: 50px; top: -25px; left: -25px; line-height: 39px; font-size: 20px;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 60px;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 40px 40px 30px 40px;}
+
+
+div.flex-container.meet-the-team div.column div.avatar {width: 130px; margin: 0 auto 15px auto;}
+div.flex-container.meet-the-team div.column {flex-basis: calc(100% / 2); padding: 15px;}
+
+
+div.flex-container.quote:before {left: 50%; transform: translateX(-50%); top: -10px; font-size: 80px; z-index: 45; color: #185DDC;}
+div.flex-container.quote div.column {flex-basis: 100%; padding: 30px 0 0 0; text-align: center;}
+
+
+div.customer-nodes ul li {top: 70px; left: 10%; width: 100px; padding: 5px;}
+div.customer-nodes ul li.two {width: 100px; right: 7%; bottom: 40px;}
+div.customer-nodes ul li.three {width: 100px; left: auto; right: -30px;}
+div.customer-nodes ul li.four {left: 20%;}
+div.customer-nodes ul li.five {right: 15%;}
+
+
+section.feature div.portal-preview div.personalised-portal {width: 200px; height: 200px;}
+section.feature div.portal-preview div.personalised-portal .h6 {font-size: 12px;}
+section.feature div.portal-preview div.device-shape.phone {left: 0;}
+section.feature div.portal-preview div.logo.mark {position: absolute; bottom: -30px; right: auto; left: 50%; transform: translateX(-50%);}
+section.feature div.portal-preview div.logo.mark:before {width: 110px; height: 110px;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Wide mobile: 480px.
+------------------------------------------------------------------------------- */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+span.viewport:after {content: 'Mobile Wide'; background: purple;}
+
+
+h1, .h1 {font-size: 8vw; letter-spacing: -0.040em;}
+h2, .h2 {font-size: 35px; letter-spacing: -0.040em;}
+h3, .h3 {font-size: 26px; letter-spacing: -0.030em;}
+h4, .h4 {font-size: 20px; letter-spacing: -0.015em;}
+h5, .h5 {font-size: 18px; letter-spacing: -0.015em;}
+h6, .h6, div.checkbox-list ul li {font-size: 16px;}
+
+
+table.inline {border: 0;}
+table.inline thead {border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+table.inline tr {display: block; margin: 0 0 30px 0; border: 2px solid #F3F6F9;}
+table.inline tbody td {display: block; border-right: 0;}
+table.inline tr td:first-of-type {background: #F3F6F9;}
+table.inline td::before {content: attr(data-label); display: block; clear: both; font-weight: 600; padding: 0 30px 0 0; font-size: 18px; line-height: 160%;}
+
+
+.button {padding: 15px 30px;}
+.button.larger {padding: 20px 40px; font-size: 18px;}
+.button.smaller {padding: 10px 30px;}
+.button.smallest {padding: 5px 20px;}
+.button.padding-left-right-none {padding: 15px 0;}
+.height-full {min-height: auto;}
+.margin-more {margin: 0 0 40px 0!important;}
+.underscore {width: 40%; margin: -4px auto 0 auto;}
+
+
+div.flex-container.twenty-fifty-thirty div.column {flex-basis: 100%; padding: 60px 5%; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column div.traveller {position: relative; top: 0; padding: 0; left: 0; display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {flex-basis: 100%; padding: 40px 5% 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer {padding: 0 0 60px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 100%; height: 70px; padding: 0 5%; align-self: flex-start; width: 100%; position: fixed; top: 0; left: 0; padding: 0; background: #FFFFFF; border: 0;border-bottom: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps div.logo {position: absolute; top: 50%; left: 0; margin: 0 0 0 15px; width: 130px; transform: translateY(-50%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps.blurred {filter: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps .traveller {height: 100%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {position: fixed; width: 100%; height: 70px; bottom: -70px; left: 0; border-left: 0; padding: 0; transition: 0.30s ease-in-out all; background: #FFFFFF; border: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary div.confetti-pop {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show {bottom: 0; height: calc(100% - 68px); padding: 0; overflow-y: scroll;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {display: block; top: 0; left: 0; z-index: 50; z-index: 250;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.traveller {min-height: 100%; top: auto; bottom: 0; background: #FFFFFF; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {display: block; position: relative; margin: 0; background: #185DDC;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {padding: 40px 5% 70px 5%; margin: 0; background: #FFFFFF; min-height: 100%; max-height: none; overflow: hidden;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {display: block; align-self: flex-start;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {display: none!important;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: block;}
+
+
+div.information-summary ul li .left, div.information-summary ul li .right {width: 100%; clear: both; display: block;}
+
+
+div.mortgage-list div.mortgage div.flex-container.header div.column {background: #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .h6 {padding: 0 130px 0 90px}
+div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 33.333333%;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 60px; height: 60px; border: 0; left: 15px;}
+
+
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column {min-height: auto; padding: 0;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column .h4 {padding: 20px 15px 20px 85px; position: relative; top: 0; left: 0; transform: none; font-size: 20px; line-height: 140%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column .text-size-smaller {font-size: 10px; line-height: 160%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 33.333333%; padding: 10px 15px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 0!important;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column .text-size-smallest {font-size: 10px; line-height: 160%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+div.modal div.mortgage-list div.mortgage div.flex-container.footer div.column {padding: 15px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 60px; height: 60px; right: auto; top: 50%; transform: translateY(-50%); left: 10px;}
+
+
+div.mortgage_results_loading {background: #FFFFFF;}
+
+
+div.progress {padding: 0; float: left; width: 100%; height: 70px}
+div.progress ul {padding: 0 15px 0 0; width: 65%; position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+div.progress ul li {clear: none; float: left; width: 16.666666%; text-align: center; padding: 22px 0 0 0; margin: 0;}
+div.progress ul li:before {left: 50%; transform: translateX(-50%); width: 25px; height: 25px; line-height: 25px!important; border: 2px solid #F3F6F9; font-size: 14px!important;}
+div.progress ul li span {display: none;}
+
+
+div.accordion div.accordion-content {padding: 10px 10px 20px 10px;}
+
+
+div.modal {padding: 0;}
+div.modal div.wrap {width: 100%;}
+div.modal div.content {padding: 60px 5% 30px 5%; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; min-height: 100vh;}
+div.modal div.flex-container {padding: 0;}
+div.modal div.flex-container div.column {padding: 15px 5% 40px 5%; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; align-self: flex-start;}
+div.modal div.flex-container div.column div.flex-container div.column.seventy, div.modal div.flex-container div.column div.flex-container div.column.fifty, div.modal div.flex-container div.column div.flex-container div.column.thirty {flex-basis: 100%;}
+div.modal.video_display div.close {position: absolute; right: 3%; top: -15px;}
+div.modal.video_display div.flex-container.center-vertically {align-items: center;}
+div.modal.video_display div.flex-container.center-vertically div.column {align-self: center;}
+
+
+div.help div.help-content {padding: 20px!important;}
+
+
+form {padding: 60px 0 600px 0;}
+form input, form select, form textarea {height: 55px;}
+form div.field.three div.field, form div.field.two div.field, form div.field.three div.field:last-of-type {width: 100%; margin: 0 0 10px 0; clear: both;}
+form div.field.three div.field:last-of-type, form div.field.two div.field:last-of-type {margin: 0;}
+form div.field-icon:before {height: 55px; line-height: 55px;}
+form ul.options li {margin: 0 5px 5px 0;}
+form ul.options.two li {width: calc(50% - 5px);}
+form ul.options.two li:last-of-type, form ul.options.two li:nth-last-child(2) {margin: 0 5px 0 0;}
+form ul.options.full li {margin: 0 0 5px 0;}
+form div.question, form div.answer {padding: 0;}
+form div.question div.meta, form div.answer div.meta {padding: 5px 0 0 0;}
+form div.question div.meta {display: none;}
+form div.question div.content, form div.answer div.content, form div.answer div.content .print {padding: 10px 15px;}
+form div.question div.content.background-yellow, form div.question div.content.background-green {padding: 15px 25px;}
+form div.answer div.content .print {padding: 11.5px 20px;}
+form div.question div.timestamp, form div.answer div.timestamp {line-height: 160%; padding: 0;}
+form div.question div.avatar, form div.answer div.avatar {display: none!important;}
+form div.answer {max-width: 100%; padding: 0;}
+form div.answer div.content {padding: 20px 15px;}
+form div.answer div.timestamp {padding: 0;}
+form .custom-checkbox + label {padding: 13px 20px 13px 50px;}
+form .custom-checkbox + label:before {width: 20px; height: 20px; top: 14px; left: 15px;}
+form .custom-checkbox:checked + label:before {-webkit-box-shadow: inset 0px 0px 0px 5px #FFFFFF; box-shadow: inset 0px 0px 0px 5px #FFFFFF;}
+
+
+/* --------- Site --------- */
+.full-width-wide-mobile {display: none;}
+header {padding: 0; height: 80px;}
+header div.logo {left: 0; transform: translateY(-50%);}
+header.stay-centered div.logo {left: 50%; transform: translate(-50%,-50%);}
+header div.fca-logo {display: none;}
+header nav.right ul li {margin: 0 0 0 5px;}
+footer ul li {display: block; clear: both; margin: 0 0 5px 0;}
+
+
+div.logo {width: 130px;}
+div.logo.mark {width: 100px;}
+
+
+div.steps {padding: 40px 0 0 0;}
+div.steps div.step {padding: 40px 40px 20px 40px;}
+
+
+div.trustpilot {width: 80px;}
+
+
+div.call-to-actions {width: 75%; margin: 0 auto;}
+div.call-to-actions ul li {margin: 0 0 10px 0; width: 100%; display: block; float: left;}
+div.call-to-actions ul li .button {display: block; width: 100%;}
+
+
+div.hero div.content {padding: 80px 30px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+div.hero .margin-more {margin: 0 0 30px 0!important;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle, div.hero div.circle.smaller {width: 90%; margin: -40px auto 30px auto; padding-bottom: 60%; top: auto; bottom: 0; left: 0; position: relative; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.hero div.circle.two {position: absolute; width: 20%; padding-bottom: 20%; bottom: -7%; right: 10%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;} 
+div.hero div.circle.two div.image {-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.hero div.circle div.image {border: 6px solid #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.hero div.checkbox-list {padding: 15px 0 0 0; text-align: center;}
+div.hero div.checkbox-list ul {display: inline-block;}
+div.hero div.checkbox-list ul li {margin: 0 0 10px 0; padding: 0 0 0 30px;}
+div.hero.collective div.content {padding: 80px 30px 42% 30px;}
+div.hero.collective div.content div.image {width: 65%; bottom: -6.5%;}
+div.hero.introduction div.content {padding: 20px 30px 50px 30px;}
+
+
+div.play {width: 60px; height: 60px; border: 4px solid #09BC8A; -webkit-box-shadow: 0px 0px 0px 6px #FFFFFF;  box-shadow: 0px 0px 0px 6px #FFFFFF;}
+div.play i {font-size: 25px;}
+div.play-instruction {display: none;}
+
+
+div.lender-logos {top: auto; bottom: 0; transform: none;}
+div.lender-logos div.lender-logo {margin: 0 20px 0 0; padding: 10px 0; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.lender-logos div.lender-logo img {width: 90%;}
+
+
+div.device-shape {outline: 6px solid #081F49;}
+div.device-shape.phone {width: 140px; height: 270px;}
+div.device-shape div.screen.img-1 {background: url(/assets/img/photos/12.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-2 {background: url(/assets/img/photos/13.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-3 {background: url(/assets/img/photos/14.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-4 {background: url(/assets/img/photos/15.png) no-repeat center center; background-size: 160px auto;}
+
+
+div.login-form {width: 100%; padding: 30px 20px;}
+
+
+div.flex-container div.column {padding: 30px 15px;}
+div.flex-container.half-circle {padding: 0 0 60px 0;}
+div.flex-container.padding-top-bottom-none div.column {padding: 0 15px;}
+div.flex-container.two div.column {flex-basis: 100%;}
+div.flex-container div.column .logo-mark {width: 45px; top: 5%; right: 3%; border: 6px solid #FFFFFF;}
+div.flex-container.two.text-image div.column {flex-basis: 100%; padding: 0;}
+div.flex-container.center-vertically {align-items: flex-start;}
+div.flex-container.center-vertically div.column, div.flex-container.center-vertically div.column div.content {align-self: flex-start;}
+div.flex-container.logos {padding: 30px 0 0 0; justify-content: center;}
+div.flex-container.logos div.column {padding: 0 25px;}
+div.flex-container.logos div.column svg {width: 90%;}
+div.flex-container.logos div.column {flex-basis: calc(100% / 4); padding: 15px;}
+div.flex-container div.circle {border: 6px solid #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; width: 100%;}
+div.flex-container div.circle div.image {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;  height: 0; padding-bottom: 60%;}
+div.flex-container.reverse-order .logo-mark {right: auto; left: 3%;}
+div.flex-container.reverse-order div.column:first-of-type {order: 1;}
+div.flex-container.reverse-order div.column:last-of-type {order: 2;}
+div.flex-container.padding-none-selective div.column {flex-basis: 100%; padding: 0;}
+div.flex-container.padding-none-selective div.column:last-of-type div.checkbox-list {padding: 15px 0;}
+div.flex-container.feature-display.equal div.column {flex-basis: 100%;}
+div.flex-container.feature-display.equal div.column:first-of-type {padding: 0 15px 15px 15px;}
+div.flex-container.four div.column {flex-basis: calc(100% / 2); padding: 30px 15px 0 15px;}
+
+
+ul.messages {top: 0; right: 0; padding: 15px;}
+ul.messages li {font-size: 14px; line-height: 160%; margin: 0 0 10px 0;}
+
+
+section, div.section {padding: 40px 0;}
+section.padding-double, div.section.padding-double {padding: 80px 0;}
+section.padding-top-double, div.section.padding-top-double {padding: 80px 0 40px 0;}
+section.padding-bottom-double, div.section.padding-bottom-double {padding: 40px 0 80px 0;}
+section.padding-top-none-bottom-double, div.section.padding-top-none-bottom-double {padding: 0 0 80px 0;}
+section.padding-top-none, div.section.padding-top-none {padding: 0 0 40px 0;}
+section.padding-bottom-none, div.section.padding-bottom-none {padding: 40px 0 0 0;}
+section.padding-none, div.section.padding-none {padding: 0;}
+section.padding-half, div.section.padding-half {padding: 20px 0;}
+section.padding-top-half, div.section.padding-top-half {padding: 20px 0 40px 0;}
+
+
+/* Broker facing website V2 */
+section.feature {padding: 30px 0;}
+
+
+div.flex-container.feature-display {align-items: center; justify-content: center;}
+div.flex-container.feature-display div.column {flex-basis: 100%; text-align: center;}
+div.flex-container.feature-display div.column:last-of-type {flex-basis: 100%;}
+div.flex-container.feature-display.reverse-order div.column {order: 1;}
+div.flex-container.feature-display.reverse-order div.column:last-of-type {order: 2;}
+div.flex-container.feature-display div.column div.logo {margin: 0 auto 30px auto; float: none;}
+
+
+section.feature-marketplace div.flex-container {align-items: center; justify-content: center;}
+section.feature-marketplace div.flex-container div.column {flex-basis: 100%; position: relative; padding: 0;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 30px 0 0 0; flex-basis: 100%;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 50px 40px 30px 40px; margin: 0 0 40px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {width: 50px; height: 50px; top: -25px; left: 50%; transform: translateX(-50%); line-height: 39px; font-size: 20px;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 60px;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 40px 40px 30px 40px;}
+
+
+div.flex-container.meet-the-team div.column div.avatar {width: 100px; margin: 0 auto 15px auto;}
+div.flex-container.meet-the-team div.column {flex-basis: calc(100% / 1); padding: 0 0 15px 0; text-align: center;}
+
+
+div.flex-container.quote:before {left: 50%; transform: translateX(-50%); top: -10px; font-size: 80px; z-index: 45; color: #185DDC;}
+div.flex-container.quote div.column {flex-basis: 100%; padding: 30px 0 0 0; text-align: center;}
+
+
+div.customer-nodes ul li {top: 8%; left: 10%; width: 80px; padding: 5px;}
+div.customer-nodes ul li.two {width: 80px; right: 5%; bottom: 5%;}
+div.customer-nodes ul li.three {width: 80px; left: auto; right: 0;}
+div.customer-nodes ul li.four {left: 15%;}
+div.customer-nodes ul li.five {right: 8%;}
+
+
+section.feature div.portal-preview {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin: 30px auto 60px auto;}
+section.feature div.portal-preview div.personalised-portal {width: 150px; height: 150px;}
+section.feature div.portal-preview div.personalised-portal .h6 {font-size: 10px;}
+section.feature div.portal-preview div.device-shape.phone {left: 0; display: none;}
+section.feature div.portal-preview div.logo.mark {position: absolute; bottom: -30px; right: auto; left: 50%; transform: translateX(-50%);}
+section.feature div.portal-preview div.logo.mark:before {width: 90px; height: 90px;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Mobile: 320px.
+------------------------------------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+span.viewport:after {content: 'Mobile Portrait'; background: pink;}
+
+
+h1, .h1 {font-size: 36px; letter-spacing: -0.040em;}
+h2, .h2 {font-size: 30px; letter-spacing: -0.040em;}
+h3, .h3 {font-size: 26px; letter-spacing: -0.030em;}
+h4, .h4 {font-size: 20px; letter-spacing: -0.015em;}
+h5, .h5 {font-size: 18px; letter-spacing: -0.015em;}
+h6, .h6, div.checkbox-list ul li {font-size: 16px;}
+
+
+table.inline {border: 0;}
+table.inline thead {border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+table.inline tr {display: block; margin: 0 0 30px 0; border: 2px solid #F3F6F9;}
+table.inline tbody td {display: block; border-right: 0;}
+table.inline tr td:first-of-type {background: #F3F6F9;}
+table.inline td::before {content: attr(data-label); display: block; clear: both; font-weight: 600; padding: 0 30px 0 0; font-size: 18px; line-height: 160%;}
+
+
+.button {padding: 15px 30px;}
+.button.larger {padding: 20px 30px; font-size: 18px;}
+.button.smaller {padding: 10px 30px;}
+.button.smallest {padding: 5px 20px;}
+.button.padding-left-right-none {padding: 15px 0;}
+.height-full {min-height: auto;}
+.margin-more {margin: 0 0 40px 0!important;}
+.introduction_paragraph {font-size: 14px; line-height: 160%;}
+.underscore {width: 40%; margin: -4px auto 0 auto;}
+
+
+div.basic-list ul, div.basic-list ul ul, div.basic-list ol, div.basic-list ol ol {padding: 0;}
+
+
+div.flex-container.twenty-fifty-thirty div.column {flex-basis: 100%; padding: 60px 5%; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column div.traveller {position: relative; top: 0; padding: 0; left: 0; display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form {flex-basis: 100%; padding: 40px 5% 60px 5%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form footer {padding: 0 0 60px 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps {flex-basis: 100%; height: 70px; padding: 0 5%; align-self: flex-start; width: 100%; position: fixed; top: 0; left: 0; padding: 0; background: #FFFFFF; border: 0;border-bottom: 2px solid #F3F6F9;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps div.logo {position: absolute; top: 50%; left: 0; margin: 0 0 0 15px; width: 32%; max-width: 130px; transform: translateY(-50%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps.blurred {filter: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_steps .traveller {height: 100%;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results {position: fixed; width: 100%; height: 70px; bottom: -70px; left: 0; border-left: 0; padding: 0; transition: 0.30s ease-in-out all; background: #FFFFFF; border: 0;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop {display: none;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.confetti-pop:before {background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary div.confetti-pop {display: block;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show {bottom: 0; height: calc(100% - 68px); padding: 0; overflow-y: scroll;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.summary {display: block; top: 0; left: 0; z-index: 50; z-index: 250;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results.show div.traveller {min-height: 100%; top: auto; bottom: 0; background: #FFFFFF; position: relative;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.summary {display: block; position: relative; margin: 0; background: #185DDC;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.content {padding: 40px 5% 70px 5%; margin: 0; background: #FFFFFF; min-height: 100%; max-height: none; overflow: hidden;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results div.traveller {display: block; align-self: flex-start;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results .fixed-message {display: none!important;}
+div.flex-container.twenty-fifty-thirty div.column#mortgage_form_results #mortgage_form_results_show {display: block;}
+
+
+div.information-summary ul li .left, div.information-summary ul li .right {width: 100%; clear: both; display: block;}
+
+
+div.mortgage-list div.mortgage div.flex-container.header div.column {background: #F3F6F9; padding: 15px;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .h6 {padding: 0 0 0 50px; position: relative; top: 0; left: 0; transform: none;}
+div.mortgage-list div.mortgage div.flex-container.header div.column .button {position: relative; top: 0; left: 0; transform: none; width: 100%; margin: 10px 0 0 0;}
+div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 50%; padding: 10px 15px;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(2n) {border-right: 0;}
+div.mortgage-list div.mortgage div.flex-container.footer div.column {padding: 15px;}
+div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 40px; height: 40px; border: 0; top: 10px; left: 10px; transform: none;}
+
+
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column {min-height: auto; padding: 0;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column .h4 {padding: 20px 15px 20px 85px; position: relative; top: 0; left: 0; transform: none; font-size: 20px; line-height: 140%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column .text-size-smaller {font-size: 10px; line-height: 160%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column {flex-basis: 50%; padding: 10px 15px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column .text-size-smallest {font-size: 10px; line-height: 160%;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:nth-of-type(3n) {border-right: 2px solid #F3F6F9;}
+div.modal div.mortgage-list div.mortgage div.flex-container.body div.column:last-of-type {border-right: 0;}
+div.modal div.mortgage-list div.mortgage div.flex-container.footer div.column {padding: 15px;}
+div.modal div.mortgage-list div.mortgage div.flex-container.header div.column div.lender {width: 60px; height: 60px; right: auto; top: 50%; transform: translateY(-50%); left: 10px;}
+
+
+div.mortgage_results_loading {background: #FFFFFF;}
+
+
+div.progress {padding: 0; float: left; width: 100%; height: 70px}
+div.progress ul {padding: 0 15px 0 0; width: 60%; position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+div.progress ul li {clear: none; float: left; width: 16.666666%; text-align: center; padding: 16px 0 0 0; margin: 0;}
+div.progress ul li:before {left: 50%; transform: translateX(-50%); width: 20px; height: 20px; line-height: 20px!important; border: 2px solid #F3F6F9; font-size: 12px!important;}
+div.progress ul li span {display: none;}
+
+
+div.accordion div.accordion-content {padding: 10px 10px 20px 10px;}
+
+
+div.modal {padding: 0;}
+div.modal div.wrap {width: 100%;}
+div.modal div.content {padding: 60px 5% 30px 5%; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; min-height: 100vh;}
+div.modal div.flex-container {padding: 0;}
+div.modal div.flex-container div.column {padding: 15px 5% 40px 5%; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; align-self: flex-start;}
+div.modal div.flex-container div.column div.flex-container div.column.seventy, div.modal div.flex-container div.column div.flex-container div.column.fifty, div.modal div.flex-container div.column div.flex-container div.column.thirty {flex-basis: 100%;}
+div.modal.video_display div.close {position: absolute; right: 3%; top: -15px;}
+div.modal.video_display div.flex-container.center-vertically {align-items: center;}
+div.modal.video_display div.flex-container.center-vertically div.column {align-self: center;}
+
+
+div.help div.help-content {padding: 20px!important;}
+
+
+form {padding: 60px 0 600px 0;}
+form input, form select, form textarea {height: 55px;}
+form div.field.three div.field, form div.field.two div.field, form div.field.three div.field:last-of-type {width: 100%; margin: 0 0 10px 0; clear: both;}
+form div.field.three div.field:last-of-type, form div.field.two div.field:last-of-type {margin: 0;}
+form div.field-icon:before {height: 55px; line-height: 55px;}
+form ul.options li {margin: 0 5px 5px 0;}
+form ul.options.two li {width: calc(50% - 5px);}
+form ul.options.two li:last-of-type, form ul.options.two li:nth-last-child(2) {margin: 0 5px 0 0;}
+form ul.options.full li {margin: 0 0 5px 0;}
+form div.question, form div.answer {padding: 0;}
+form div.question div.meta, form div.answer div.meta {padding: 5px 0 0 0;}
+form div.question div.meta {display: none;}
+form div.question div.content, form div.answer div.content, form div.answer div.content .print {padding: 10px 15px;}
+form div.question div.content.background-yellow, form div.question div.content.background-green {padding: 15px 25px;}
+form div.answer div.content .print {padding: 11.5px 20px;}
+form div.question div.timestamp, form div.answer div.timestamp {line-height: 160%; padding: 0;}
+form div.question div.avatar, form div.answer div.avatar {display: none!important;}
+form div.answer {max-width: 100%; padding: 0;}
+form div.answer div.content {padding: 20px 15px;}
+form div.answer div.timestamp {padding: 0;}
+form .custom-checkbox + label {padding: 13px 20px 13px 50px;}
+form .custom-checkbox + label:before {width: 20px; height: 20px; top: 14px; left: 15px;}
+form .custom-checkbox:checked + label:before {-webkit-box-shadow: inset 0px 0px 0px 5px #FFFFFF; box-shadow: inset 0px 0px 0px 5px #FFFFFF;}
+form div.step.start, form div.step.first_question {padding: 0 0 100px 0;}
+form div.step {padding: 100px 0;}
+
+
+/* --------- Site --------- */
+.full-width-wide-mobile, br.full-width-mobile {display: none;}
+header {padding: 0; height: 80px;}
+header div.logo {left: 0; transform: translateY(-50%);}
+header.stay-centered div.logo {left: 50%; transform: translate(-50%,-50%);}
+header div.fca-logo {display: none;}
+header nav.right ul li {margin: 0 0 0 5px;}
+footer ul li {display: block; clear: both; margin: 0 0 5px 0;}
+
+
+div.logo {width: 130px;}
+div.logo.mark {width: 100px;}
+
+
+div.steps {padding: 30px 0 0 0;}
+div.steps div.step {padding: 30px 30px 10px 30px;}
+
+
+div.trustpilot {width: 80px;}
+
+
+div.call-to-actions ul li {margin: 0 0 10px 0; width: 100%; display: block; float: left;}
+div.call-to-actions ul li .button {display: block; width: 100%;}
+
+
+div.hero div.content {padding: 50px 5%; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+div.hero .margin-more {margin: 0 0 30px 0!important;}
+div.hero h4 {font-size: 18px; margin: 0 0 15px 0;}
+div.hero div.shape svg {fill: #185DDC;}
+div.hero div.circle, div.hero div.circle.smaller {width: 90%; margin: -40px auto 30px auto; padding-bottom: 60%; top: auto; bottom: 0; left: 0; position: relative; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.hero div.circle.two {position: absolute; width: 25%; padding-bottom: 25%; bottom: -8%; right: 10%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;} 
+div.hero div.circle.two div.image {-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+div.hero div.circle div.image {border: 6px solid #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.hero div.checkbox-list {padding: 15px 0 0 0; text-align: center;}
+div.hero div.checkbox-list ul {display: inline-block;}
+div.hero div.checkbox-list ul li {margin: 0 0 10px 0; padding: 0 0 0 30px;}
+div.hero.collective div.content {padding: 50px 5% 55% 5%;}
+div.hero.collective div.content div.image {width: 80%; bottom: -5.5%;}
+div.hero.introduction div.content {padding: 20px 5% 50px 5%;}
+div.hero.introduction div.call-to-actions {margin: 0 0 15px 0;}
+
+
+div.login-form {width: 100%; padding: 30px 20px;}
+
+
+div.play {width: 60px; height: 60px; border: 4px solid #09BC8A; -webkit-box-shadow: 0px 0px 0px 6px #FFFFFF;  box-shadow: 0px 0px 0px 6px #FFFFFF;}
+div.play i {font-size: 25px;}
+div.play-instruction {display: none;}
+
+
+div.lender-logos {top: auto; bottom: 0; transform: none;}
+div.lender-logos div.lender-logo {margin: 0 10px 0 0; padding: 10px 0; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+div.lender-logos div.lender-logo img {width: 90%;}
+
+
+div.device-shape {outline: 6px solid #081F49;}
+div.device-shape.phone {width: 140px; height: 270px;}
+div.device-shape div.screen.img-1 {background: url(/assets/img/photos/12.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-2 {background: url(/assets/img/photos/13.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-3 {background: url(/assets/img/photos/14.png) no-repeat center center; background-size: 130px auto;}
+div.device-shape div.screen.img-4 {background: url(/assets/img/photos/15.png) no-repeat center center; background-size: 160px auto;}
+
+
+div.flex-container div.column {padding: 30px 15px;}
+div.flex-container.half-circle {padding: 0 0 30px 0;}
+div.flex-container.padding-top-bottom-none div.column {padding: 0;}
+div.flex-container.two div.column {flex-basis: 100%;}
+div.flex-container div.column .logo-mark {width: 45px; top: 5%; right: 3%; border: 6px solid #FFFFFF;}
+div.flex-container.two.text-image div.column {flex-basis: 100%; padding: 0;}
+div.flex-container.center-vertically {align-items: flex-start;}
+div.flex-container.center-vertically div.column, div.flex-container.center-vertically div.column div.content {align-self: flex-start;}
+div.flex-container.logos {padding: 30px 0 0 0; justify-content: center;}
+div.flex-container.logos div.column {flex-basis: calc(100% / 4); padding: 15px 0;}
+div.flex-container.logos div.column svg {width: 75%;}
+div.flex-container div.circle {border: 6px solid #FFFFFF; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; width: 100%;}
+div.flex-container div.circle div.image {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; height: 0; padding-bottom: 60%;}
+div.flex-container.reverse-order .logo-mark {right: auto; left: 3%;}
+div.flex-container.reverse-order div.column:first-of-type {order: 1;}
+div.flex-container.reverse-order div.column:last-of-type {order: 2;}
+div.flex-container.padding-none-selective div.column {flex-basis: 100%; padding: 0;}
+div.flex-container.padding-none-selective div.column:last-of-type div.checkbox-list {padding: 15px 0;}
+div.flex-container.feature-display.equal div.column {flex-basis: 100%;}
+div.flex-container.feature-display.equal div.column:first-of-type {padding: 0 0 15px 0;}
+div.flex-container.four div.column {flex-basis: calc(100% / 1); padding: 30px 15px 0 15px;}
+
+
+ul.messages {top: 0; right: 0; padding: 15px;}
+ul.messages li {font-size: 14px; line-height: 160%; margin: 0 0 10px 0;}
+
+
+section, div.section {padding: 30px 0;}
+section.padding-double, div.section.padding-double {padding: 60px 0;}
+section.padding-top-double, div.section.padding-top-double {padding: 60px 0 30px 0;}
+section.padding-bottom-double, div.section.padding-bottom-double {padding: 30px 0 60px 0;}
+section.padding-top-none-bottom-double, div.section.padding-top-none-bottom-double {padding: 0 0 60px 0;}
+section.padding-top-none, div.section.padding-top-none {padding: 0 0 30px 0;}
+section.padding-bottom-none, div.section.padding-bottom-none {padding: 30px 0 0 0;}
+section.padding-none, div.section.padding-none {padding: 0;}
+section.padding-half, div.section.padding-half {padding: 15px 0;}
+section.padding-top-half, div.section.padding-top-half {padding: 15px 0 30px 0;}
+
+
+/* Broker facing website V2 */
+section.feature {padding: 30px 0;}
+
+
+div.flex-container.feature-display {align-items: center; justify-content: center;}
+div.flex-container.feature-display div.column {flex-basis: 100%; text-align: center;}
+div.flex-container.feature-display div.column:last-of-type {flex-basis: 100%;}
+div.flex-container.feature-display.reverse-order div.column {order: 1;}
+div.flex-container.feature-display.reverse-order div.column:last-of-type {order: 2;}
+div.flex-container.feature-display div.column div.logo {margin: 0 auto 30px auto; float: none;}
+
+
+section.feature-marketplace div.flex-container {align-items: center; justify-content: center;}
+section.feature-marketplace div.flex-container div.column {flex-basis: 100%; position: relative; padding: 0;}
+section.feature-marketplace div.flex-container div.column:last-of-type {padding: 30px 0 0 0; flex-basis: 100%;}
+section.feature-marketplace div.flex-container div.column div.content {padding: 50px 40px 30px 40px; margin: 0 0 40px 0;}
+section.feature-marketplace div.flex-container div.column div.content div.key-number {width: 50px; height: 50px; top: -25px; left: 50%; transform: translateX(-50%); line-height: 39px; font-size: 20px;}
+
+
+div.flex-container.padded-content div.column div.content {padding: 60px 40px;}
+div.flex-container.padded-content.smaller div.column div.content {padding: 40px 40px 30px 40px;}
+
+
+div.flex-container.meet-the-team div.column div.avatar {width: 100px; margin: 0 auto 15px auto;}
+div.flex-container.meet-the-team div.column {flex-basis: calc(100% / 1); padding: 0 0 15px 0; text-align: center;}
+
+
+div.flex-container.quote:before {left: 50%; transform: translateX(-50%); top: 0; font-size: 60px; z-index: 45; color: #185DDC;}
+div.flex-container.quote div.column {flex-basis: 100%; padding: 30px 0 0 0; text-align: center;}
+
+
+div.customer-nodes ul li {top: 8%; left: 10%; width: 60px; padding: 5px;}
+div.customer-nodes ul li.two {width: 60px; right: 5%; bottom: 5%;}
+div.customer-nodes ul li.three {width: 60px; left: auto; right: 0;}
+div.customer-nodes ul li.four {left: 10%;}
+div.customer-nodes ul li.five {width: 110px; right: 5%;}
+
+
+section.feature div.portal-preview {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin: 30px auto 60px auto;}
+section.feature div.portal-preview div.personalised-portal {width: 120px; height: 120px;}
+section.feature div.portal-preview div.personalised-portal .h6 {font-size: 10px;}
+section.feature div.portal-preview div.device-shape.phone {left: 0; display: none;}
+section.feature div.portal-preview div.logo.mark {position: absolute; bottom: -30px; right: auto; left: 50%; transform: translateX(-50%);}
+section.feature div.portal-preview div.logo.mark:before {width: 90px; height: 90px;}
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------
+			Animations
+------------------------------------------------------------------------------- */
+.animation-flicker {-webkit-animation: animation-flicker 2s infinite; -moz-animation: animation-flicker 2s infinite; -o-animation: animation-flicker 2s infinite; animation: animation-flicker 2s infinite;}
+.animation-yellow-flash {animation: animation-yellow-flash 1s linear 2 normal;}
+.animation-green-flash {animation: animation-green-flash 1s linear 2 normal;}
+.animation-blue-flash {animation: animation-blue-flash 1s linear 2 normal;}
+.animation-blue-flash.infinite {animation: animation-blue-flash 2s linear infinite normal;}
+.animation-yellow-flash.infinite.slower {animation: animation-yellow-flash 2s linear infinite normal;}
+.animation-yellow-flash.infinite {animation: animation-yellow-flash 1s linear infinite normal;}
+.animation-animated-face {-webkit-animation: animation-avatar 2s infinite; -moz-animation: animation-avatar 2s infinite; -o-animation: animation-avatar 2s infinite; animation: animation-avatar 2s infinite;}
+.animation-move-up-down {-webkit-animation: animation-move-up-down 3s infinite  alternate; animation: animation-move-up-down 3s infinite  alternate;}
+.animation-move-up-down-slower {-webkit-animation: animation-move-up-down 5s infinite  alternate; animation: animation-move-up-down 5s infinite  alternate;}
+.animation-move-up-down-slowest {-webkit-animation: animation-move-up-down 4s infinite  alternate; animation: animation-move-up-down 4s infinite  alternate;}
+.animation-zoom-in-out {animation: animation-zoom-in-zoom-out 2s ease; -webkit-animation: animation-zoom-in-zoom-out 2s ease; z-index: 50;}
+.animation-rotate-image {-webkit-animation: animation-rotate-image 2s infinite alternate; animation: animation-rotate-image 2s infinite alternate;}
+@-webkit-keyframes animation-move-up-down {
+  0% { transform: translate(0);}
+  50% { transform: translate(-10px,-10px);}
+  100% { transform: translate(-30px,-10px);}
+}
+@keyframes animation-move-up-down {
+  0% { transform: translate(0);}
+  50% { transform: translate(-10px,-10px);}
+  100% { transform: translate(-30px,-10px);}
+}
+@keyframes animation-flicker {
+	0%   { opacity: 1; }
+	50%  { opacity: 0.15; }
+	100% { opacity: 1; }
+  }
+@-webkit-keyframes animation-flicker {
+	0%   { opacity: 1; }
+	50%  { opacity: 0.15; }
+	100% { opacity: 1; }
+}
+@keyframes animation-avatar {
+	0%   { left: 50% }
+	25%  { left: 60% }
+	50%  { left: 60%; top: 40%}
+	25%  { left: 60%; top: 50%;}
+	100% { left: 50%; top: 50%;}
+  }
+@-webkit-keyframes animation-avatar {
+  0%   { left: 50% }
+  25%  { left: 60% }
+  50%  { left: 60%; top: 40%}
+  25%  { left: 60%; top: 50%;}
+  100% { left: 50%; top: 50%;}
+}
+@-webkit-keyframes animation-play-video {
+  0%   { transform: translate(0)  rotate(2deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+@keyframes animation-play-video {
+  0%   { transform: translate(0) rotate(2deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+@-webkit-keyframes animation-rotate {
+  from{-webkit-transform: translate(-50%,-50%) rotate(0deg);}
+  to{-webkit-transform: translate(-50%,-50%) rotate(360deg);}
+}
+@keyframes animation-rotate {
+  from{transform: translate(-50%,-50%) rotate(0deg);}
+  to{transform: translate(-50%,-50%) rotate(360deg);}
+}
+@-webkit-keyframes animation-yellow-flash {
+  0%   {-webkit-box-shadow: 0 0 0 0 rgba(255, 201, 20, 0.30);}
+  70%  {-webkit-box-shadow: 0 0 0 10px rgba(255, 201, 20, 0);}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(255, 201, 20, 0);}}
+@keyframes animation-yellow-flash {
+  0%   {-moz-box-shadow: 0 0 0 0 rgba(255, 201, 20, 0.30); box-shadow: 0 0 0 0 rgba(255, 201, 20, 0.30);}
+  70%  {-moz-box-shadow: 0 0 0 10px rgba(255, 201, 20, 0); box-shadow: 0 0 0 20px rgba(255, 201, 20, 0);}
+  100% {-moz-box-shadow: 0 0 0 0 rgba(255, 201, 20, 0); box-shadow: 0 0 0 0 rgba(255, 201, 20, 0);}}
+@-webkit-keyframes animation-green-flash {
+  0%   {-webkit-box-shadow: 0 0 0 0 rgba(9, 188, 138, 0.30);}
+  70%  {-webkit-box-shadow: 0 0 0 10px rgba(9, 188, 138, 0);}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(9, 188, 138, 0);}}
+@keyframes animation-green-flash {
+  0%   {-moz-box-shadow: 0 0 0 0 rgba(9, 188, 138, 0.30); box-shadow: 0 0 0 0 rgba(9, 188, 138, 0.30);}
+  70%  {-moz-box-shadow: 0 0 0 10px rgba(9, 188, 138, 0); box-shadow: 0 0 0 20px rgba(9, 188, 138, 0);}
+  100% {-moz-box-shadow: 0 0 0 0 rgba(9, 188, 138, 0); box-shadow: 0 0 0 0 rgba(9, 188, 138, 0);}}
+@-webkit-keyframes animation-blue-flash {
+  0%   {-webkit-box-shadow: 0 0 0 0 rgba(24, 93, 220, 0.30);}
+  70%  {-webkit-box-shadow: 0 0 0 10px rgba(24, 93, 220, 0);}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(24, 93, 220, 0);}}
+@keyframes animation-blue-flash {
+  0%   {-moz-box-shadow: 0 0 0 0 rgba(24, 93, 220, 0.30); box-shadow: 0 0 0 0 rgba(24, 93, 220, 0.30);}
+  70%  {-moz-box-shadow: 0 0 0 10px rgba(24, 93, 220, 0); box-shadow: 0 0 0 20px rgba(24, 93, 220, 0);}
+  100% {-moz-box-shadow: 0 0 0 0 rgba(24, 93, 220, 0); box-shadow: 0 0 0 0 rgba(24, 93, 220, 0);}}
+@-webkit-keyframes animation-arrow-bounce-right {
+  0%, 100% {-webkit-transform: translate(-10px,50%); transform: translate(-10px,50%);}
+  25%, 50% {-webkit-transform: translate(0,50%); transform: translate(0,50%);}}
+@keyframes animation-arrow-bounce-right {
+  0%, 100% {-webkit-transform: translate(-10px,-50%); transform: translate(-10px,-50%);}
+  25%, 50% {-webkit-transform: translate(0,-50%); transform: translate(0,-50%);}}
+  @keyframes animation-slide-out-right {
+    0%   { left: 0; }
+    100% { left: 100%; }
+    }
+    @keyframes animation-slide-out-right {
+    0%   { left: 0; }
+    100% { left: 100%; }
+  }
+  @keyframes animation-zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @-webkit-keyframes animation-rotate-image {
+    0% { transform: rotate(-3.5deg);}
+    100% { transform: rotate(-7deg);}
+  }
+  @keyframes animation-rotate-image {
+    0% { transform: rotate(-3.5deg);}
+    100% { transform: rotate(-7deg);}
+  }
