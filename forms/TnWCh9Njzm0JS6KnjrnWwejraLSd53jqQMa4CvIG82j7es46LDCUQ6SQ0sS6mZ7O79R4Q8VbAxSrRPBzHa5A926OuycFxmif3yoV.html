@@ -124,8 +124,8 @@ window.onclick = function(event) {
 
 
     <script src="../stackform.js"></script>
-    <script type="text/javascript" src="./js/imgur.js"></script>
-    <script type="text/javascript" src="./js/upload.js"></script>
+    <script type="text/javascript" src="../js/imgur.js"></script>
+    <script type="text/javascript" src="../js/upload.js"></script>
     <script>
       var form = {
     "1": {
@@ -236,6 +236,12 @@ window.onclick = function(event) {
         "next": 11
     }
 }
+         window.form = form
+        window.questions = questions
+        createForm(form)
+        renderQuestions(questions)
+        window.localStorage.setItem("form", form)
+        window.localStorage.setItem("questions", questions)
     </script>
 </body>
 <script>
